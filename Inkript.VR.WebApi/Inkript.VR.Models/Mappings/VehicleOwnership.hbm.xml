@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<hibernate-mapping assembly="Inkript.VR.Models" namespace="Inkript.VR.Models" xmlns="urn:nhibernate-mapping-2.2">
+  <class name="VehicleOwnership" table="VehicleOwnership" lazy="false" >
+    <id name="VehicleOwnershipId" column="VehicleOwnershipId">
+      <generator class="identity" />
+    </id>
+    <property name="OwnerId">
+      <column name="OwnerId" sql-type="int" not-null="false" />
+    </property>
+    <property name="OwnerTypeId">
+      <column name="OwnerTypeId" sql-type="int" not-null="false" />
+    </property>
+    <property name="RegisteredVehicleId">
+      <column name="RegisteredVehicleId" sql-type="int" not-null="false" />
+    </property>
+    <property name="StatusId">
+      <column name="StatusId" sql-type="int" not-null="false" />
+    </property>
+    <property name="AcquisitionDate">
+      <column name="AcquisitionDate" sql-type="date" not-null="false" />
+    </property>
+  </class>
+</hibernate-mapping>

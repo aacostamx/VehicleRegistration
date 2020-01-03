@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<hibernate-mapping assembly="Inkript.VR.Models" namespace="Inkript.VR.Models" xmlns="urn:nhibernate-mapping-2.2">
+  <class name="ApplicationDocuments" table="ApplicationDocuments" lazy="false" >
+    <id name="AppDocumentId" column="AppDocumentId">
+      <generator class="identity" />
+    </id>
+    <property name="ApplicationId">
+      <column name="ApplicationId" sql-type="int" not-null="false" />
+    </property>
+    <property name="DocumentId">
+      <column name="DocumentId" sql-type="int" not-null="false" />
+    </property>
+  </class>
+</hibernate-mapping>

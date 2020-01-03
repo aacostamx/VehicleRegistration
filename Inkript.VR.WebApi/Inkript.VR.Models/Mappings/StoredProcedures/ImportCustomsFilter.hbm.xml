@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" assembly="Inkript.VR.Models" namespace="Inkript.VR.Models">
+
+  <sql-query name="ImportCustomsFilter">
+    <return-scalar column="ImportCustomId" type="Int32"/>
+    <return-scalar column="FileInfoCustomId" type="Int32"/>
+    <return-scalar column="CertificateDate" type="DateTime"/>
+    <return-scalar column="OperationType" type="String"/>
+    <return-scalar column="CertificateId" type="String"/>
+    <return-scalar column="FiscalYear" type="Int32"/>
+    <return-scalar column="ImporterCode" type="Int32"/>
+    <return-scalar column="ImporterName" type="String"/>
+    <return-scalar column="BrandId" type="Int32"/>
+    <return-scalar column="BrandDesc" type="String"/>
+    <return-scalar column="ModelId" type="Int32"/>
+    <return-scalar column="ModelDesc" type="String"/>
+    <return-scalar column="ProductionYear" type="Int32"/>
+    <return-scalar column="ColorId" type="Int32"/>
+    <return-scalar column="ColorDesc" type="String"/>
+    <return-scalar column="Chassis" type="String"/>
+    <return-scalar column="MotorNumber" type="String"/>
+    <return-scalar column="Comments" type="String"/>
+    <return-scalar column="CreatedDate" type="DateTime"/>
+    <return-scalar column="DateModified" type="DateTime"/>
+    <return-scalar column="Value" type="Int32"/>
+    <return-scalar column="Taxes" type="Int32"/>
+    <return-scalar column="Cylinders" type="Int32"/>
+    <return-scalar column="OfficeId" type="Int32"/>
+    <return-scalar column="Discounted" type="bool"/>
+
+    exec ImportCustomsFilter @YearFrom=:YearFrom, @YearTo=:YearTo, @OperationType=:OperationType, @Chassis=:Chassis, @MotorNumber=:MotorNumber, @BrandId=:BrandId, @ModelId=:ModelId, @ColorId=:ColorId, @Cylinders=:Cylinders, @OfficeId=:OfficeId, @ProductionYear=:ProductionYear, @CertificateId=:CertificateId, @ImporterCode=:ImporterCode, @ImporterName=:ImporterName, @Discounted=:Discounted
+
+  </sql-query>
+
+</hibernate-mapping>

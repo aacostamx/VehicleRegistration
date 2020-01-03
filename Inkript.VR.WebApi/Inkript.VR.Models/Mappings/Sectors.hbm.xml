@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<hibernate-mapping assembly="Inkript.VR.Models" namespace="Inkript.VR.Models" xmlns="urn:nhibernate-mapping-2.2">
+  <class name="Sectors" table="Sectors" lazy="false" >
+    <id name="SectorId" column="SectorId">
+      <generator class="identity" />
+    </id>
+    <property name="SectorNameEn">
+      <column name="SectorNameEn" sql-type="nvarchar" not-null="false" />
+    </property>
+    <property name="SectorNameAr">
+      <column name="SectorNameAr" sql-type="nvarchar" not-null="false" />
+    </property>
+  </class>
+</hibernate-mapping>

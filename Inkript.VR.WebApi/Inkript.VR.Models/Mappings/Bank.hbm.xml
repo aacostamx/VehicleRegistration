@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<hibernate-mapping assembly="Inkript.VR.Models" namespace="Inkript.VR.Models" xmlns="urn:nhibernate-mapping-2.2">
+  <class name="Bank" table="Bank" lazy="false" >
+    <id name="BankId" column="BankId">
+      <generator class="identity" />
+    </id>
+    <property name="BankName">
+      <column name="BankName" sql-type="nvarchar" not-null="true" />
+    </property>
+    <property name="StatusId">
+      <column name="StatusId" sql-type="int" not-null="true" />
+    </property>
+  </class>
+</hibernate-mapping>

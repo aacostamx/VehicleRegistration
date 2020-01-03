@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<hibernate-mapping assembly="Inkript.VR.Models" namespace="Inkript.VR.Models" xmlns="urn:nhibernate-mapping-2.2">
+  <class name="Districts" table="Districts" lazy="false" >
+    <id name="DistrictId" column="DistrictId">
+      <generator class="identity" />
+    </id>
+    <property name="DistrictNameEn">
+      <column name="DistrictNameEn" sql-type="nvarchar" not-null="true" />
+    </property>
+    <property name="DistrictNameAr">
+      <column name="DistrictNameAr" sql-type="nvarchar" not-null="true" />
+    </property>
+    <property name="GovernateId">
+      <column name="GovernateId" sql-type="int" not-null="true" />
+    </property>
+    <!--<bag name="Cities" inverse="true" lazy="false">
+      <key column="DistrictId" />
+      <one-to-many class="Cities" />
+    </bag>-->
+  </class>
+</hibernate-mapping>

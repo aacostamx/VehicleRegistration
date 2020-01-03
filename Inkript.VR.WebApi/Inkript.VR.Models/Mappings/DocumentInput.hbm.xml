@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<hibernate-mapping assembly="Inkript.VR.Models" namespace="Inkript.VR.Models" xmlns="urn:nhibernate-mapping-2.2">
+  <class name="DocumentInput" table="DocumentInput" lazy="false" >
+    <id name="DocumentInputId" column="DocumentInputId">
+      <generator class="identity" />
+    </id>
+    <property name="DocumentId">
+      <column name="DocumentId" sql-type="int" not-null="true" />
+    </property>
+    <property name="InputType">
+      <column name="InputType" sql-type="nvarchar" not-null="true" />
+    </property>
+    <property name="InputNameEn">
+      <column name="InputNameEn" sql-type="nvarchar" not-null="true" />
+    </property>
+    <property name="InputNameAr">
+      <column name="InputNameAr" sql-type="nvarchar" not-null="true" />
+    </property>
+    <property name="InputRequired">
+      <column name="InputRequired" sql-type="nvarchar" not-null="true" />
+    </property>
+  </class>
+</hibernate-mapping>

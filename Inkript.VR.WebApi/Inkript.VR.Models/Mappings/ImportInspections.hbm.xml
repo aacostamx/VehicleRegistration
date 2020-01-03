@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<hibernate-mapping assembly="Inkript.VR.Models" namespace="Inkript.VR.Models" xmlns="urn:nhibernate-mapping-2.2">
+  <class name="ImportInspections" table="ImportInspections" lazy="false" >
+    <id name="ImportInspectionId" column="ImportInspectionId">
+      <generator class="identity" />
+    </id>
+    <many-to-one name="FileInfoInspections" lazy="false">
+      <column name="FileInfoInspectionId" sql-type="int" not-null="false" />
+    </many-to-one>
+    <property name="CarUniqueNumber">
+      <column name="CarUniqueNumber" sql-type="int" not-null="false" />
+    </property>
+    <property name="InspectionDate">
+      <column name="InspectionDate" sql-type="datetime" not-null="true" />
+    </property>
+    <property name="PlateNumber">
+      <column name="PlateNumber" sql-type="nvarchar" not-null="true" />
+    </property>
+    <property name="PlateCodeId">
+      <column name="PlateCodeId" sql-type="int" not-null="true" />
+    </property>
+    <property name="CertificateNo">
+      <column name="CertificateNo" sql-type="nvarchar" not-null="true" />
+    </property>
+    <property name="Result">
+      <column name="Result" sql-type="nvarchar" not-null="true" />
+    </property>
+    <property name="ImportDate">
+      <column name="ImportDate" sql-type="datetime" not-null="true" />
+    </property>
+    <property name="CreatedBy">
+      <column name="CreatedBy" sql-type="int" not-null="false" />
+    </property>
+    <property name="Chassis">
+      <column name="Chassis" sql-type="nvarchar" not-null="true" />
+    </property>
+  </class>
+</hibernate-mapping>

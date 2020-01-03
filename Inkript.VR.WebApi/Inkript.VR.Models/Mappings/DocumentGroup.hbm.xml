@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<hibernate-mapping assembly="Inkript.VR.Models" namespace="Inkript.VR.Models" xmlns="urn:nhibernate-mapping-2.2">
+  <class name="DocumentGroups" table="DocumentGroups" lazy="false" >
+    <id name="GroupId" column="GroupId">
+      <generator class="identity" />
+    </id>
+    <property name="GroupName">
+      <column name="GroupName" sql-type="nvarchar" not-null="true" />
+    </property>
+    <bag name="Documents" inverse="true" lazy="false">
+      <key column="GroupId" />
+      <one-to-many class="Documents" />
+    </bag>
+  </class>
+</hibernate-mapping>

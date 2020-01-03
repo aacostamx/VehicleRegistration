@@ -1,0 +1,105 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" assembly="Inkript.VR.Models" namespace="Inkript.VR.Models">
+
+  <sql-query name="GetRegisteredCarBy">
+
+    <return alias="RegisteredVehicles" class="RegisteredVehicles">
+      <return-property name="RegisteredVehicleId" column="RegisteredVehicleId"/>
+      <return-property name="CarUniqueNumber">
+        <return-column name="CarUniqueNumberVal"/>
+        <return-column name="TrimId"/>
+        <return-column name="ModelId"/>
+        <return-column name="BrandId"/>
+        <return-column name="Chassis"/>
+      </return-property>
+      <return-property name="PlateNumber" column="PlateNumber" />
+      <return-property name="PlateCodes">
+        <return-column name="PlateCodeId"/>
+        <return-column name="CodeDescEn"/>
+        <return-column name="CodeDescAr"/>
+      </return-property>
+      <return-property name="FORM">
+        <return-column name="FormId"/>
+        <return-column name="FormNameEn"/>
+        <return-column name="FomNameAr"/>
+        <return-column name="StatusId"/>
+      </return-property>
+      <return-property name="Colors">
+        <return-column name="ColorId"/>
+        <return-column name="ColorNameEn"/>
+        <return-column name="ColorNameAr"/>
+        <return-column name="StatusId"/>
+      </return-property>
+      <return-property name="Utilization">
+        <return-column name="UtilizationId"/>
+        <return-column name="UtilizationDesc"/>
+        <return-column name="CreatedBy"/>
+        <return-column name="CreatedDate"/>
+        <return-column name="UpdatedBy"/>
+        <return-column name="UpdatedDate"/>
+      </return-property>
+      <return-property name="TrunkType">
+        <return-column name="TrunkTypeId"/>
+        <return-column name="TrunkTypeDescEn"/>
+        <return-column name="TrunkTypeDescAr"/>
+        <return-column name="StatusId"/>
+      </return-property>
+      <return-property name="FuelTypes">
+        <return-column name="FuelTypeId"/>
+        <return-column name="FuelNameEn"/>
+        <return-column name="FuelNameAr"/>
+      </return-property>
+      <return-property name="MotorNumber" column="MotorNumber" />
+      <return-property name="HorsePower" column="HorsePower" />
+      <return-property name="Cylinders" column="Cylinders" />
+      <return-property name="CapacityCC" column="CapacityCC" />
+      <return-property name="Seats" column="Seats" />
+      <return-property name="SeatsNextDriver" column="SeatsNextDriver" />
+      <return-property name="PassengersNo" column="PassengersNo" />
+      <return-property name="EmptyWeight" column="EmptyWeight" />
+      <return-property name="NetWeight" column="NetWeight" />
+      <return-property name="TotalWeight" column="TotalWeight" />
+      <return-property name="YearMake" column="YearMake" />
+      <return-property name="VehicleCategory">
+        <return-column name="VehicleCategoryId"/>
+        <return-column name="CategoryDescEn"/>
+        <return-column name="StatusId"/>
+      </return-property>
+      <return-property name="Sectors">
+        <return-column name="SectorId"/>
+        <return-column name="SectorNameEn"/>
+        <return-column name="SectorNameAr"/>
+      </return-property>
+      <return-property name="VehicleTypes">
+        <return-column name="VehicleTypeId"/>
+        <return-column name="VehicleTypeNameEn"/>
+        <return-column name="VehicleTypeNameAr"/>
+      </return-property>
+      <return-property name="InServiceDate" column="InServiceDate" />
+      <return-property name="DateRegistered" column="DateRegistered" />
+      <return-property name="CarStatus">
+        <return-column name="CarStatusId"/>
+        <return-column name="StatusNameEn"/>
+        <return-column name="StatusNameAr"/>
+      </return-property>
+      <return-property name="Branches">
+        <return-column name="BranchId"/>
+        <return-column name="BranchNameEn"/>
+        <return-column name="BranchNameAr"/>
+      </return-property>
+      <return-property name="Status">
+        <return-column name="StatusId"/>
+        <return-column name="StatusDesc"/>
+      </return-property>
+      <return-property name="ExemptionCategory" column="ExemptionCategory" />
+      <return-property name="Comments" column="Comments" />
+      <return-property name="CreatedBy" column="CreatedBy" />
+      <return-property name="CreatedDate" column="CreatedDate" />
+      <return-property name="UpdatedBy" column="UpdatedBy" />
+      <return-property name="UpdatedDate" column="UpdatedDate" />
+    </return>
+
+    exec GetRegisteredCarBy @PlateNumber=:PlateNumber, @PlateCodeId=:PlateCodeId, @CarUniqueNumber=:CarUniqueNumber, @CarStatusId=:CarStatusId
+  </sql-query>
+
+</hibernate-mapping>

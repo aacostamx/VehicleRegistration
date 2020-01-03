@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<hibernate-mapping assembly="Inkript.VR.Models" namespace="Inkript.VR.Models" xmlns="urn:nhibernate-mapping-2.2">
+  <class name="PlateCodes" table="PlateCodes" lazy="false" >
+    <id name="PlateCodeId" column="PlateCodeId">
+      <generator class="identity" />
+    </id>
+    <property name="CodeDescEn">
+      <column name="CodeDescEn" sql-type="nvarchar" not-null="true" unique="true" />
+    </property>
+    <property name="CodeDescAr">
+      <column name="CodeDescAr" sql-type="nvarchar" not-null="true" unique="true" />
+    </property>
+    <property name="BranchId">
+      <column name="BranchId" sql-type="int" not-null="true" />
+    </property>
+  </class>
+</hibernate-mapping>

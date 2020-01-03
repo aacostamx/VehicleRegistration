@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<hibernate-mapping assembly="Inkript.VR.Models" namespace="Inkript.VR.Models" xmlns="urn:nhibernate-mapping-2.2">
+  <class name="BPFee" table="BPFee" lazy="false" >
+    <id name="BPFeeId" column="BPFeeId">
+      <generator class="identity" />
+    </id>
+    <property name="FeeId">
+      <column name="FeeId" sql-type="int" not-null="true" />
+    </property>
+    <property name="BPId">
+      <column name="BPId" sql-type="int" not-null="true" />
+    </property>
+    <property name="SectorId">
+      <column name="SectorId" sql-type="int" not-null="true" />
+    </property>
+    <property name="VTId">
+      <column name="VTId" sql-type="int" not-null="true" />
+    </property>
+    <property name="TaxPercentageApplicable">
+      <column name="TaxPercentageApplicable" sql-type="decimal" not-null="false" />
+    </property>
+  </class>
+</hibernate-mapping>

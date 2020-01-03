@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<hibernate-mapping assembly="Inkript.VR.Models" namespace="Inkript.VR.Models" xmlns="urn:nhibernate-mapping-2.2">
+  <class name="HoldTypes" table="HoldTypes" lazy="false" >
+    <id name="HoldTypeId" column="HoldTypeId">
+      <generator class="identity" />
+    </id>
+    <property name="HoldTypeNameEn">
+      <column name="HoldTypeNameEn" sql-type="nvarchar" not-null="true" />
+    </property>
+    <property name="HoldTypeNameAr">
+      <column name="HoldTypeNameAr" sql-type="nvarchar" not-null="true" />
+    </property>
+  </class>
+</hibernate-mapping>

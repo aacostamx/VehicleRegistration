@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<hibernate-mapping assembly="Inkript.VR.Models" namespace="Inkript.VR.Models" xmlns="urn:nhibernate-mapping-2.2">
+  <class name="AuditLog" table="AuditLog" lazy="false" >
+    <id name="LogId" column="LogId">
+      <generator class="identity" />
+    </id>
+    <property name="ActivityId">
+      <column name="ActivityId" sql-type="int" not-null="true" />
+    </property>
+    <property name="UserId">
+      <column name="UserId" sql-type="int" not-null="true" />
+    </property>
+    <property name="AuditDate">
+      <column name="AuditDate" sql-type="datetime" not-null="true" />
+    </property>
+    <property name="JsonObject">
+      <column name="JsonObject" sql-type="nvarchar" not-null="true" />
+    </property>
+    <property name="ActivityStatus">
+      <column name="ActivityStatus" sql-type="nvarchar" not-null="true" />
+    </property>
+  </class>
+</hibernate-mapping>

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<hibernate-mapping assembly="Inkript.VR.Models" namespace="Inkript.VR.Models" xmlns="urn:nhibernate-mapping-2.2">
+  <class name="FileInfoInspections" table="FileInfoInspections" lazy="false" >
+    <id name="FileInfoInspectionId" column="FileInfoInspectionId">
+      <generator class="identity" />
+    </id>
+    <property name="BranchName">
+      <column name="BranchName" sql-type="nvarchar" not-null="false" />
+    </property>
+    <property name="FileType">
+      <column name="FileType" sql-type="nvarchar" not-null="false" />
+    </property>
+    <property name="FromDate">
+      <column name="FromDate" sql-type="date" not-null="false" />
+    </property>
+    <property name="TillDate">
+      <column name="TillDate" sql-type="date" not-null="false" />
+    </property>
+    <property name="Name">
+      <column name="Name" sql-type="nvarchar" not-null="false" />
+    </property>
+    <property name="NoRecords">
+      <column name="NoRecords" sql-type="int" not-null="false" />
+    </property>
+    <property name="ImportedDate">
+      <column name="ImportedDate" sql-type="datetime" not-null="false" />
+    </property>
+    <property name="ImportStatus">
+      <column name="ImportStatus" sql-type="nvarchar" not-null="false" />
+    </property>
+    <bag name="ImportInspections" inverse="true" cascade="all" lazy="false">
+      <key column="FileInfoInspectionId" on-delete="cascade"/>
+      <one-to-many class="ImportInspections" />
+    </bag>
+  </class>
+</hibernate-mapping>

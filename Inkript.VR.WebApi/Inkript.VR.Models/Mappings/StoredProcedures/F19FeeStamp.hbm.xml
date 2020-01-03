@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" assembly="Inkript.VR.Models" namespace="Inkript.VR.Models">
+
+  <sql-query name="F19FeeStamp">
+      <return-scalar column="FeeId" type="Int32"/>
+      <return-scalar column="FeeNameEn" type="String"/>
+      <return-scalar column="FeeNameAr" type="String"/>
+      <return-scalar column="FeeType" type="Int32"/>
+      <return-scalar column="FeeValue" type="float"/>
+      <return-scalar column="FeeTotal" type="float"/>
+      <return-scalar column="FeeMessageEn" type="String"/>
+      <return-scalar column="FeeMessageAr" type="String"/>
+      <return-scalar column="FeeSP" type="String"/>
+      <return-scalar column="Api" type="String"/>
+      <return-scalar column="FeeCategoryId" type="Int32"/>
+      <return-scalar column="StatusId" type="Int32"/>
+    
+    exec F19FeeStamp @Value=:Value, @CalledFromUI=:CalledFromUI
+  </sql-query>
+
+</hibernate-mapping>

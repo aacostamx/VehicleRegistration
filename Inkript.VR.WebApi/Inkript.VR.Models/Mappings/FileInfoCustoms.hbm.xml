@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<hibernate-mapping assembly="Inkript.VR.Models" namespace="Inkript.VR.Models" xmlns="urn:nhibernate-mapping-2.2">
+  <class name="FileInfoCustoms" table="FileInfoCustoms" lazy="false" >
+    <id name="FileInfoCustomId" column="FileInfoCustomId">
+      <generator class="identity" />
+    </id>
+    <property name="Name">
+      <column name="Name" sql-type="nvarchar" not-null="false" />
+    </property>
+    <property name="NoRecords">
+      <column name="NoRecords" sql-type="int" not-null="true" />
+    </property>
+    <property name="ImportedDate">
+      <column name="ImportedDate" sql-type="date" not-null="false" />
+    </property>
+    <property name="MessageError">
+      <column name="MessageError" sql-type="nvarchar" not-null="false" />
+    </property>
+    <property name="ImportStatus">
+      <column name="ImportStatus" sql-type="nvarchar" not-null="true" />
+    </property>
+    <bag name="ImportCustoms" inverse="true" lazy="false">
+      <key column="FileInfoCustomId" />
+      <one-to-many class="ImportCustoms" />
+    </bag>
+  </class>
+</hibernate-mapping>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<hibernate-mapping assembly="Inkript.VR.Models" namespace="Inkript.VR.Models" xmlns="urn:nhibernate-mapping-2.2">
+  <class name="BPOutputRel" table="BPOutputRel" lazy="false" >
+    <id name="BPOuputId" column="BPOuputId">
+      <generator class="identity" />
+    </id>
+    <property name="BPId">
+      <column name="BPId" sql-type="int" not-null="true" />
+    </property>
+    <many-to-one name="BPOutput">
+      <column name="OutputDeliverableId" sql-type="int" not-null="true" />
+    </many-to-one>
+  </class>
+</hibernate-mapping>

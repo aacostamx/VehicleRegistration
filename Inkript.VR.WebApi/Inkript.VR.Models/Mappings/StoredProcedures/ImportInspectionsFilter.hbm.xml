@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" assembly="Inkript.VR.Models" namespace="Inkript.VR.Models">
+
+  <sql-query name="ImportInspectionsFilter">
+    <return-scalar column="ImportInspectionId" type="Int32"/>
+    <return-scalar column="FileInfoInspectionId" type="Int32"/>
+    <return-scalar column="CarUniqueNumber" type="Int32"/>
+    <return-scalar column="InspectionDate" type="DateTime"/>
+    <return-scalar column="PlateNumber" type="String"/>
+    <return-scalar column="PlateCodeId" type="Int32"/>
+    <return-scalar column="CertificateNo" type="String"/>
+    <return-scalar column="Result" type="String"/>
+    <return-scalar column="ImportDate" type="DateTime"/>
+    <return-scalar column="CreatedBy" type="Int32"/>
+    <return-scalar column="Chassis" type="String"/>
+    exec ImportInspectionsFilter @YearFrom=:YearFrom, @YearTo=:YearTo, @PlateNumber=:PlateNumber, @PlateCodeId=:PlateCodeId
+  </sql-query>
+
+</hibernate-mapping>

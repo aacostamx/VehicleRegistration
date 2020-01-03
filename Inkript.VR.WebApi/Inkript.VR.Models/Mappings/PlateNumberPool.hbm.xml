@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<hibernate-mapping assembly="Inkript.VR.Models" namespace="Inkript.VR.Models" xmlns="urn:nhibernate-mapping-2.2">
+  <class name="PlateNumberPool" table="PlateNumberPool" lazy="false" >
+    <id name="PlateNumberPoolId" column="PlateNumberPoolId" />
+    <many-to-one name="PlateCodes">
+      <column name="PlateCodeId" sql-type="int" not-null="false" />
+    </many-to-one>
+    <property name="PlateRangeId">
+      <column name="PlateRangeId" sql-type="int" not-null="false" />
+    </property>
+    <property name="StatusId">
+      <column name="StatusId" sql-type="int" not-null="true" />
+    </property>
+    <property name="PlateNumber">
+      <column name="PlateNumber" sql-type="nvarchar" not-null="false" />
+    </property>
+    <property name="UpdatedBy">
+      <column name="UpdatedBy" sql-type="int" not-null="false" />
+    </property>
+    <property name="CreatedDate">
+      <column name="CreatedDate" sql-type="datetime" not-null="false" />
+    </property>
+  </class>
+</hibernate-mapping>

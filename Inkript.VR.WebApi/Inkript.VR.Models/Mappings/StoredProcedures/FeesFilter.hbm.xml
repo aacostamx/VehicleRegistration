@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" assembly="Inkript.VR.Models" namespace="Inkript.VR.Models">
+
+  <sql-query name="FeesFilter">
+
+    <return alias="Fees" class="Fees">
+      <return-property name="FeeId" column="FeeId"/>
+      <return-property name="FeeCode" column="FeeCode"/>
+      <return-property name="FeeNameEn" column="FeeNameEn"/>
+      <return-property name="FeeNameAr" column="FeeNameEn"/>
+      <return-property name="FeeType" column="FeeType"/>
+      <return-property name="FeeValue" column="FeeValue"/>
+      <return-property name="FeeSP" column="FeeSP"/>
+      <return-property name="Api" column="Api"/>
+      <return-property name="FeeCategory">
+        <return-column name="FeeCategoryId"/>
+        <return-column name="FeeCategoryNameEn"/>
+        <return-column name="FeeCategoryNameAr"/>
+        <return-column name="FeeCategorySequence"/>
+      </return-property>
+      <return-property name="Status">
+        <return-column name="StatusId"/>
+        <return-column name="StatusDesc"/>
+      </return-property>
+    </return>
+    
+    exec FeesFilter :search
+  </sql-query>
+
+</hibernate-mapping>

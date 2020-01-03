@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" assembly="Inkript.VR.Models" namespace="Inkript.VR.Models">
+
+  <sql-query name="DraftApplicationFilter">
+    <return-scalar column="ApplicationId" type="Int32"/>
+    <return-scalar column="BranchId" type="Int32"/>
+    <return-scalar column="SectionId" type="Int32"/>
+    <return-scalar column="BusinessProcess" type="String"/>
+    <return-scalar column="CarPlateInfo" type="String"/>
+    <return-scalar column="CarUniqueNumber" type="Int32"/>
+    <return-scalar column="CarDetails" type="String"/>
+    <return-scalar column="OwnerType" type="Int32"/>
+    <return-scalar column="OwnersInfo" type="String"/>
+    <return-scalar column="Fees" type="String"/>
+    <return-scalar column="Documents" type="String"/>
+    <return-scalar column="AutomaticallyCalculatedFees" type="String"/>
+    <return-scalar column="OutputDocuments" type="String"/>
+    <return-scalar column="CreatedBy" type="Int32"/>
+    <return-scalar column="ProcessedBy" type="String"/>
+    <return-scalar column="InvoicesNumbers" type="String"/>
+    <return-scalar column="StatusId" type="Int32"/>
+    <return-scalar column="CreatedDate" type="DateTime"/>
+    <return-scalar column="UpdatedDate" type="DateTime"/>
+    <return-scalar column="UpdatedBy" type="Int32"/>
+
+    exec DraftApplicationFilter @StatusId=:StatusId, @UserId=:UserId
+  </sql-query>
+
+</hibernate-mapping>

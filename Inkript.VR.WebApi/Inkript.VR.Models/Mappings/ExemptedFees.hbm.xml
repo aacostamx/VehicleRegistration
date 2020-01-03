@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<hibernate-mapping assembly="Inkript.VR.Models" namespace="Inkript.VR.Models" xmlns="urn:nhibernate-mapping-2.2">
+  <class name="ExemptedFees" table="ExemptedFees" lazy="false" >
+    <composite-id>
+      <key-property name="ExemptedFeeId" column="ExemptedFeeId" />
+      <key-property name="ExemptedCategoryId" column="ExemptedCategoryId" />
+    </composite-id>
+    <property name="StatusId">
+      <column name="StatusId" sql-type="int" not-null="true" />
+    </property>
+  </class>
+</hibernate-mapping>

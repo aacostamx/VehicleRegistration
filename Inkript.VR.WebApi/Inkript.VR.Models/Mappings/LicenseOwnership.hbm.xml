@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<hibernate-mapping assembly="Inkript.VR.Models" namespace="Inkript.VR.Models" xmlns="urn:nhibernate-mapping-2.2">
+  <class name="LicenseOwnership" table="LicenseOwnership" lazy="false" >
+    <id name="LicenseOwnershipId" column="LicenseOwnershipId">
+      <generator class="identity" />
+    </id>
+    <property name="OwnerId">
+      <column name="OwnerId" sql-type="int" not-null="false" />
+    </property>
+    <property name="OwnerTypeId">
+      <column name="OwnerTypeId" sql-type="int" not-null="false" />
+    </property>
+    <property name="PlateNumber">
+      <column name="PlateNumber" sql-type="nvarchar" not-null="false" />
+    </property>
+    <property name="PlateCodeId">
+      <column name="PlateCodeId" sql-type="int" not-null="false" />
+    </property>
+    <property name="SectorId">
+      <column name="SectorId" sql-type="int" not-null="false" />
+    </property>
+    <property name="VehicleTypeId">
+      <column name="VehicleTypeId" sql-type="int" not-null="false" />
+    </property>
+    <property name="PassengersNo">
+      <column name="PassengersNo" sql-type="int" not-null="false" />
+    </property>
+    <property name="NetWeight">
+      <column name="NetWeight" sql-type="int" not-null="false" />
+    </property>
+    <property name="StatusId">
+      <column name="StatusId" sql-type="int" not-null="false" />
+    </property>
+    <property name="CreatedDate">
+      <column name="CreatedDate" sql-type="datetime" not-null="false" />
+    </property>
+    <property name="ExpiryDate">
+      <column name="ExpiryDate" sql-type="date" not-null="false" />
+    </property>
+    <property name="Comments">
+      <column name="Comments" sql-type="nvarchar" not-null="false" />
+    </property>
+  </class>
+</hibernate-mapping>

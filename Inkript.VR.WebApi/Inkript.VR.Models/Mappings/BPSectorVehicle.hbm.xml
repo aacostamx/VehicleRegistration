@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<hibernate-mapping assembly="Inkript.VR.Models" namespace="Inkript.VR.Models" xmlns="urn:nhibernate-mapping-2.2">
+  <class name="BPSectorVehicle" table="BPSectorVehicle" lazy="true" >
+    <id name="BPSectorVehicleId" column="BPSectorVehicleId">
+      <generator class="identity" />
+    </id>
+    <property name="BPId">
+      <column name="BPId" sql-type="int" not-null="true" />
+    </property>
+    <property name="SectorId">
+      <column name="SectorId" sql-type="int" not-null="true" />
+    </property>
+    <property name="VehicleTypeId">
+      <column name="VehicleTypeId" sql-type="int" not-null="true" />
+    </property>
+  </class>
+</hibernate-mapping>

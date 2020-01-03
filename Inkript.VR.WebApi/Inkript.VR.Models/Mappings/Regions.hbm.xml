@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<hibernate-mapping assembly="Inkript.VR.Models" namespace="Inkript.VR.Models" xmlns="urn:nhibernate-mapping-2.2">
+  <class name="Regions" table="Regions" lazy="false" >
+    <id name="RegionId" column="RegionId">
+      <generator class="identity" />
+    </id>
+    <property name="RegionNameEn">
+      <column name="RegionNameEn" sql-type="nvarchar" not-null="true" />
+    </property>
+    <property name="RegionNameAr">
+      <column name="RegionNameAr" sql-type="nvarchar" not-null="true" />
+    </property>
+    <many-to-one name="Districts">
+      <column name="DistrictId" sql-type="int" not-null="true" />
+    </many-to-one>
+  </class>
+</hibernate-mapping>

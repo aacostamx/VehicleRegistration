@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" assembly="Inkript.VR.Models" namespace="Inkript.VR.Models">
+
+  <sql-query name="SectorsFilter">
+    <return-scalar column="SectorId" type="Int32"/>
+    <return-scalar column="SectorNameEn" type="String"/>
+    <return-scalar column="SectorNameAr" type="String"/>
+    exec SectorsFilter :search
+  </sql-query>
+
+</hibernate-mapping>

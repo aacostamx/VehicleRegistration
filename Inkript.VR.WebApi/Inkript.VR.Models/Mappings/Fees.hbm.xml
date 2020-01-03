@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<hibernate-mapping assembly="Inkript.VR.Models" namespace="Inkript.VR.Models" xmlns="urn:nhibernate-mapping-2.2">
+  <class name="Fees" table="Fees" lazy="false" >
+    <id name="FeeId" column="FeeId">
+      <generator class="identity" />
+    </id>
+    <many-to-one name="FeeCategory">
+      <column name="FeeCategoryId" sql-type="int" not-null="true" />
+    </many-to-one>
+    <many-to-one name="Status">
+      <column name="StatusId" sql-type="int" not-null="true" />
+    </many-to-one>
+    <property name="FeeCode">
+      <column name="FeeCode" sql-type="bigint" not-null="false" />
+    </property>
+    <property name="FeeNameEn">
+      <column name="FeeNameEn" sql-type="nvarchar" not-null="false" />
+    </property>
+    <property name="FeeNameAr">
+      <column name="FeeNameAr" sql-type="nvarchar" not-null="false" />
+    </property>
+    <property name="FeeType">
+      <column name="FeeType" sql-type="int" not-null="false" />
+    </property>
+    <property name="FeeValue">
+      <column name="FeeValue" sql-type="float" not-null="false" />
+    </property>
+    <property name="FeeSP">
+      <column name="FeeSP" sql-type="nvarchar" not-null="false" />
+    </property>
+    <property name="Api">
+      <column name="Api" sql-type="nvarchar" not-null="false" />
+    </property>
+    <bag name="BPFee" inverse="true" lazy="false">
+      <key column="BPId" />
+      <one-to-many class="BPFee" />
+    </bag>
+    <bag name="ExemptedFees" inverse="true" lazy="false">
+      <key column="ExemptedFeeId" />
+      <one-to-many class="ExemptedFees" />
+    </bag>
+  </class>
+</hibernate-mapping>

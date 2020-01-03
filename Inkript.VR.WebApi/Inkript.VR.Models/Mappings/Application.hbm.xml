@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<hibernate-mapping assembly="Inkript.VR.Models" namespace="Inkript.VR.Models" xmlns="urn:nhibernate-mapping-2.2">
+  <class name="Application" table="Application" lazy="false" >
+    <id name="ApplicationId" column="ApplicationId">
+      <generator class="identity" />
+    </id>
+    <many-to-one name="Status">
+      <column name="StatusId" sql-type="int" not-null="true" />
+    </many-to-one>
+    <property name="BranchId">
+      <column name="BranchId" sql-type="int" not-null="true" />
+    </property>
+    <property name="SectionId">
+      <column name="SectionId" sql-type="int" not-null="false" />
+    </property>
+    <property name="BusinessProcess">
+      <column name="BusinessProcess" sql-type="nvarchar" not-null="false" />
+    </property>
+    <property name="CarPlateInfo">
+      <column name="CarPlateInfo" sql-type="nvarchar" not-null="false" />
+    </property>
+    <property name="CarUniqueNumber">
+      <column name="CarUniqueNumber" sql-type="int" not-null="true" />
+    </property>
+    <property name="CarDetails">
+      <column name="CarDetails" sql-type="nvarchar" not-null="false" />
+    </property>
+    <property name="OwnerType">
+      <column name="OwnerType" sql-type="int" not-null="false" />
+    </property>
+    <property name="OwnersInfo">
+      <column name="OwnersInfo" sql-type="nvarchar" not-null="false" />
+    </property>
+    <property name="Fees">
+      <column name="Fees" sql-type="nvarchar" not-null="false" />
+    </property>
+    <property name="Documents">
+      <column name="Documents" sql-type="nvarchar" not-null="false" />
+    </property>
+    <property name="AutomaticallyCalculatedFees">
+      <column name="AutomaticallyCalculatedFees" sql-type="nvarchar" not-null="false" />
+    </property>
+    <property name="OutputDocuments">
+      <column name="OutputDocuments" sql-type="nvarchar" not-null="false" />
+    </property>
+    <property name="CreatedBy">
+      <column name="CreatedBy" sql-type="int" not-null="false" />
+    </property>
+    <property name="ProcessedBy">
+      <column name="ProcessedBy" sql-type="nvarchar" not-null="false" />
+    </property>
+    <property name="InvoicesNumbers">
+      <column name="InvoicesNumbers" sql-type="nvarchar" not-null="false" />
+    </property>
+    <property name="CreatedDate">
+      <column name="CreatedDate" sql-type="datetime" not-null="false" />
+    </property>
+    <property name="UpdatedDate">
+      <column name="UpdatedDate" sql-type="datetime" not-null="false" />
+    </property>
+    <property name="UpdatedBy">
+      <column name="UpdatedBy" sql-type="int" not-null="false" />
+    </property>
+  </class>
+</hibernate-mapping>

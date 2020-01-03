@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" assembly="Inkript.VR.Models" namespace="Inkript.VR.Models">
+
+  <sql-query name="PlateRangesFilter">
+    <return-scalar column="PlateRangeId" type="Int32"/>
+    <return-scalar column="RangeName" type="String"/>
+    <return-scalar column="StartNumber" type="Int32"/>
+    <return-scalar column="EndNumber" type="Int32"/>
+    <return-scalar column="TotalAvailable" type="Int32"/>
+    <return-scalar column="SectorId" type="Int32"/>
+    <return-scalar column="VehicleTypeId" type="Int32"/>
+    <return-scalar column="PlateCodeId" type="Int32"/>
+    <return-scalar column="BranchId" type="Int32"/>
+    <return-scalar column="SQLSequence" type="String"/>
+    <return-scalar column="StatusId" type="Int32"/>
+    <return-scalar column="PriorityLevel" type="Int32"/>
+    <return-scalar column="CreatedBy" type="Int32"/>
+    <return-scalar column="UpdatedBy" type="Int32"/>
+    <return-scalar column="CreatedDate" type="DateTime"/>
+    <return-scalar column="ModifiedDate" type="DateTime"/>
+    <return-scalar column="Prefix" type="String"/>
+    <return-scalar column="DiplomaticLevel" type="String"/>
+    exec PlateRangesFilter @SectorId=:SectorId, @BranchId=:BranchId, @VehicleTypeId=:VehicleTypeId, @PlateCodeId=:PlateCodeId
+  </sql-query>
+
+</hibernate-mapping>

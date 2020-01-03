@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<hibernate-mapping assembly="Inkript.VR.Models" namespace="Inkript.VR.Models" xmlns="urn:nhibernate-mapping-2.2">
+  <class name="AppConfigCommit" table="AppConfigCommit" lazy="false" >
+    <id name="SectionId" column="SectionId">
+      <generator class="identity" />
+    </id>
+    <property name="SectionName">
+      <column name="SectionName" sql-type="nvarchar" not-null="true" />
+    </property>
+    <property name="BPId">
+      <column name="BPId" sql-type="int" not-null="true" />
+    </property>
+  </class>
+</hibernate-mapping>

@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" assembly="Inkript.VR.Models" namespace="Inkript.VR.Models">
+
+  <sql-query name="PersonFilter">
+    <return-scalar column="PersonId" type="Int32"/>
+    <return-scalar column="DrivingLicenseId" type="Int32"/>
+    <return-scalar column="NationalId" type="Int32"/>
+    <return-scalar column="FirstName" type="String"/>
+    <return-scalar column="MiddleName" type="String"/>
+    <return-scalar column="LastName" type="String"/>
+    <return-scalar column="MotherName" type="String"/>
+    <return-scalar column="MotherMaidenName" type="String"/>
+    <return-scalar column="DateOfBirth" type="DateTime"/>
+    <return-scalar column="CityOfBirth" type="String"/>
+    <return-scalar column="CountryOfBirth" type="String"/>
+    <return-scalar column="CityId" type="Int32"/>
+    <return-scalar column="Street" type="String"/>
+    <return-scalar column="Building" type="String"/>
+    <return-scalar column="Floor" type="Int32"/>
+    <return-scalar column="PIN" type="String"/>
+    <return-scalar column="NumberOfRegistry" type="String"/>
+    <return-scalar column="Phone" type="String"/>
+
+
+    exec PersonFilter @search=:search
+  </sql-query>
+
+</hibernate-mapping>

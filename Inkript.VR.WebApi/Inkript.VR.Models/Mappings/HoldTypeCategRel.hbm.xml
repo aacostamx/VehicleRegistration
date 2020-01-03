@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<hibernate-mapping assembly="Inkript.VR.Models" namespace="Inkript.VR.Models" xmlns="urn:nhibernate-mapping-2.2">
+  <class name="HoldTypeCategRel" table="HoldTypeCategRel" lazy="false" >
+    <id name="HoldTypeId" column="HoldTypeId" />
+    <property name="LockedCategoryId">
+      <column name="LockedCategoryId" sql-type="int" not-null="true" />
+    </property>
+  </class>
+</hibernate-mapping>

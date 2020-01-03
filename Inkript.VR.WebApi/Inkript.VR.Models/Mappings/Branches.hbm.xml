@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<hibernate-mapping assembly="Inkript.VR.Models" namespace="Inkript.VR.Models" xmlns="urn:nhibernate-mapping-2.2">
+  <class name="Branches" table="Branches" lazy="false" >
+    <id name="BranchId" column="BranchId">
+      <generator class="identity" />
+    </id>
+    <property name="BranchNameEn">
+      <column name="BranchNameEn" sql-type="nvarchar" not-null="true" />
+    </property>
+    <property name="BranchNameAr">
+      <column name="BranchNameAr" sql-type="nvarchar" not-null="true" />
+    </property>
+    <many-to-one name="Status">
+      <column name="StatusId" sql-type="int" not-null="true" />
+    </many-to-one>
+  </class>
+</hibernate-mapping>

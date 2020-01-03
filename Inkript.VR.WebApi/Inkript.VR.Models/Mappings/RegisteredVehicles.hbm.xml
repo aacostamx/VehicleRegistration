@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<hibernate-mapping assembly="Inkript.VR.Models" namespace="Inkript.VR.Models" xmlns="urn:nhibernate-mapping-2.2">
+  <class name="RegisteredVehicles" table="RegisteredVehicles" lazy="false" >
+    <id name="RegisteredVehicleId" column="RegisteredVehicleId">
+      <generator class="identity" />
+    </id>
+    <many-to-one name="CarUniqueNumber">
+      <column name="CarUniqueNumber" sql-type="int" not-null="true" />
+    </many-to-one>
+    <many-to-one name="PlateCodes">
+      <column name="PlateCodeId" sql-type="int" not-null="false" />
+    </many-to-one>
+    <many-to-one name="FORM">
+      <column name="FormId" sql-type="int" not-null="true" />
+    </many-to-one>
+    <many-to-one name="Colors">
+      <column name="ColorId" sql-type="int" not-null="false" />
+    </many-to-one>
+    <many-to-one name="Utilization">
+      <column name="UtilizationId" sql-type="int" not-null="false" />
+    </many-to-one>
+    <many-to-one name="TrunkType">
+      <column name="TrunkTypeId" sql-type="int" not-null="false" />
+    </many-to-one>
+    <many-to-one name="FuelTypes">
+      <column name="FuelTypeId" sql-type="int" not-null="false" />
+    </many-to-one>
+    <many-to-one name="VehicleCategory">
+      <column name="VehicleCategoryId" sql-type="int" not-null="true" />
+    </many-to-one>
+    <many-to-one name="Sectors">
+      <column name="SectorId" sql-type="int" not-null="false" />
+    </many-to-one>
+    <many-to-one name="VehicleTypes">
+      <column name="VehicleTypeId" sql-type="int" not-null="false" />
+    </many-to-one>
+    <many-to-one name="CarStatus">
+      <column name="CarStatusId" sql-type="int" not-null="false" />
+    </many-to-one>
+    <many-to-one name="Branches">
+      <column name="BranchId" sql-type="int" not-null="false" />
+    </many-to-one>
+    <many-to-one name="Status">
+      <column name="StatusId" sql-type="int" not-null="false" />
+    </many-to-one>
+    <property name="PlateNumber">
+      <column name="PlateNumber" sql-type="nvarchar" not-null="true" />
+    </property>
+    <property name="MotorNumber">
+      <column name="MotorNumber" sql-type="nvarchar" not-null="false" />
+    </property>
+    <property name="HorsePower">
+      <column name="HorsePower" sql-type="int" not-null="true" />
+    </property>
+    <property name="Cylinders">
+      <column name="Cylinders" sql-type="int" not-null="true" />
+    </property>
+    <property name="CapacityCC">
+      <column name="CapacityCC" sql-type="int" not-null="true" />
+    </property>
+    <property name="Seats">
+      <column name="Seats" sql-type="int" not-null="false" />
+    </property>
+    <property name="SeatsNextDriver">
+      <column name="SeatsNextDriver" sql-type="int" not-null="false" />
+    </property>
+    <property name="PassengersNo">
+      <column name="PassengersNo" sql-type="int" not-null="false" />
+    </property>
+    <property name="EmptyWeight">
+      <column name="EmptyWeight" sql-type="int" not-null="false" />
+    </property>
+    <property name="NetWeight">
+      <column name="NetWeight" sql-type="int" not-null="false" />
+    </property>
+    <property name="TotalWeight">
+      <column name="TotalWeight" sql-type="int" not-null="false" />
+    </property>
+    <property name="YearMake">
+      <column name="YearMake" sql-type="int" not-null="false" />
+    </property>
+    <property name="InServiceDate">
+      <column name="InServiceDate" sql-type="date" not-null="false" />
+    </property>
+    <property name="DateRegistered">
+      <column name="DateRegistered" sql-type="date" not-null="false" />
+    </property>
+    <property name="ExemptionCategory">
+      <column name="ExemptionCategory" sql-type="int" not-null="false" />
+    </property>
+    <property name="Comments">
+      <column name="Comments" sql-type="nvarchar" not-null="false" />
+    </property>
+    <property name="CreatedBy">
+      <column name="CreatedBy" sql-type="int" not-null="false" />
+    </property>
+    <property name="CreatedDate">
+      <column name="CreatedDate" sql-type="datetime" not-null="false" />
+    </property>
+    <property name="UpdatedBy">
+      <column name="UpdatedBy" sql-type="int" not-null="false" />
+    </property>
+    <property name="UpdatedDate">
+      <column name="UpdatedDate" sql-type="datetime" not-null="false" />
+    </property>
+      <bag name="VehicleOwnership" inverse="true" lazy="false">
+      <key column="RegisteredVehicleId" />
+      <one-to-many class="VehicleOwnership" />
+    </bag>
+  </class>
+</hibernate-mapping>

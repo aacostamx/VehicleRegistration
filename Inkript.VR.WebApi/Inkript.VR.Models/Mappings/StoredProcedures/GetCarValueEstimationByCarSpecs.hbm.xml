@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" assembly="Inkript.VR.Models" namespace="Inkript.VR.Models">
+
+  <sql-query name="GetCarValueEstimationByCarSpecs">
+    <return-scalar column="Value" type="string"/>
+
+    exec GetCarValueEstimationByCarSpecs @BrandId=:BrandId, @ModelId=:ModelId, @Trim=:Trim, @CC=:CC, @NumberHorses=:NumberHorses, @ChassisNumber=:ChassisNumber
+  </sql-query>
+
+</hibernate-mapping>

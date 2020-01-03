@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<hibernate-mapping assembly="Inkript.VR.Models" namespace="Inkript.VR.Models" xmlns="urn:nhibernate-mapping-2.2">
+  <class name="SectorVehicleTypeRel" table="SectorVehicleTypeRel" lazy="false" >
+    <id name="RelId" column="RelId" />
+    <many-to-one name="Utilization">
+      <column name="UtilizationId" sql-type="int" not-null="true" />
+    </many-to-one>
+    <many-to-one name="Sectors">
+      <column name="SectorId" sql-type="int" not-null="true" />
+    </many-to-one>
+    <many-to-one name="VehicleTypes">
+      <column name="VehicleTypeId" sql-type="int" not-null="true" />
+    </many-to-one>
+  </class>
+</hibernate-mapping>

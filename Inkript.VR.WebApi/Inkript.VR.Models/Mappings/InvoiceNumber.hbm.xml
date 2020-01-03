@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<hibernate-mapping assembly="Inkript.VR.Models" namespace="Inkript.VR.Models" xmlns="urn:nhibernate-mapping-2.2">
+  <class name="InvoiceNumber" table="InvoiceNumber" lazy="false" >
+    <id name="InvoiceNumberId" column="InvoiceNumberId">
+      <generator class="identity" />
+    </id>
+    <property name="CreatedDate">
+      <column name="CreatedDate" sql-type="datetime" not-null="true" />
+    </property>
+  </class>
+</hibernate-mapping>

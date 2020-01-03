@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<hibernate-mapping assembly="Inkript.VR.Models" namespace="Inkript.VR.Models" xmlns="urn:nhibernate-mapping-2.2">
+  <class name="BPOutput" table="BPOutput" lazy="false" >
+    <id name="BPOutputId" column="BPOutputId">
+      <generator class="identity" />
+    </id>
+    <property name="OutputNameEN">
+      <column name="OutputNameEN" sql-type="nvarchar" not-null="true" />
+    </property>
+    <property name="OutputNameAR">
+      <column name="OutputNameAR" sql-type="nvarchar" not-null="true" />
+    </property>
+  </class>
+</hibernate-mapping>

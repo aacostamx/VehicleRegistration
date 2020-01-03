@@ -1,0 +1,60 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27130.2027
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Inkript.VR.API", "Inkript.VR.API\Inkript.VR.API.csproj", "{6B89B4B1-2871-4A39-B1B7-52C934D5EBD5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Inkript.VR.Business", "Inkript.VR.Business\Inkript.VR.Business.csproj", "{64F4BA81-A17E-4F23-BC08-4A5667CD8A9D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Inkript.VR.Models", "Inkript.VR.Models\Inkript.VR.Models.csproj", "{40C918D7-C27E-4907-819F-8CFBBE6CCE42}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Inkript.VR.Test", "Inkript.VR.Test\Inkript.VR.Test.csproj", "{80EFB6D0-1F1E-4365-A208-EBF0DB876176}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{6B89B4B1-2871-4A39-B1B7-52C934D5EBD5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6B89B4B1-2871-4A39-B1B7-52C934D5EBD5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6B89B4B1-2871-4A39-B1B7-52C934D5EBD5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6B89B4B1-2871-4A39-B1B7-52C934D5EBD5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{64F4BA81-A17E-4F23-BC08-4A5667CD8A9D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{64F4BA81-A17E-4F23-BC08-4A5667CD8A9D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{64F4BA81-A17E-4F23-BC08-4A5667CD8A9D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{64F4BA81-A17E-4F23-BC08-4A5667CD8A9D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{40C918D7-C27E-4907-819F-8CFBBE6CCE42}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{40C918D7-C27E-4907-819F-8CFBBE6CCE42}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{40C918D7-C27E-4907-819F-8CFBBE6CCE42}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{40C918D7-C27E-4907-819F-8CFBBE6CCE42}.Release|Any CPU.Build.0 = Release|Any CPU
+		{80EFB6D0-1F1E-4365-A208-EBF0DB876176}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{80EFB6D0-1F1E-4365-A208-EBF0DB876176}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{80EFB6D0-1F1E-4365-A208-EBF0DB876176}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{80EFB6D0-1F1E-4365-A208-EBF0DB876176}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {63202B64-8BBC-4131-9D3E-764BA95062D0}
+	EndGlobalSection
+	GlobalSection(TeamFoundationVersionControl) = preSolution
+		SccNumberOfProjects = 5
+		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccLocalPath0 = .
+		SccProjectUniqueName1 = Inkript.VR.API\\Inkript.VR.API.csproj
+		SccProjectName1 = Inkript.VR.API
+		SccLocalPath1 = Inkript.VR.API
+		SccProjectUniqueName2 = Inkript.VR.Business\\Inkript.VR.Business.csproj
+		SccProjectName2 = Inkript.VR.Business
+		SccLocalPath2 = Inkript.VR.Business
+		SccProjectUniqueName3 = Inkript.VR.Models\\Inkript.VR.Models.csproj
+		SccProjectName3 = Inkript.VR.Models
+		SccLocalPath3 = Inkript.VR.Models
+		SccProjectUniqueName4 = Inkript.VR.Test\\Inkript.VR.Test.csproj
+		SccProjectName4 = Inkript.VR.Test
+		SccLocalPath4 = Inkript.VR.Test
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" assembly="Inkript.VR.Models" namespace="Inkript.VR.Models">
+
+  <sql-query name="OrganizationFilter">
+    <return alias="Organization" class="Organization">
+      <return-property name="OrganizationId" column="OrganizationId"/>
+      <return-property name="OrganizationName" column="OrganizationName"/>
+      <return-property name="RegistrationNumber" column="RegistrationNumber"/>
+      <return-property name="RegisterRegionId" column="RegisterRegionId"/>
+      <return-property name="MOFNumber" column="MOFNumber"/>
+      <return-property name="SectorId" column="SectorId"/>
+      <return-property name="CompanyClassId" column="CompanyClassId"/>
+      <return-property name="CompanyCategoryId" column="CompanyCategoryId"/>
+      <return-property name="RegionId" column="RegionId"/>
+      <return-property name="Street" column="Street"/>
+      <return-property name="Building" column="Building"/>
+      <return-property name="Status">
+        <return-column name="StatusId"/>
+        <return-column name="StatusDesc"/>
+      </return-property>
+    </return>
+
+    exec OrganizationFilter @search=:search
+  </sql-query>
+
+</hibernate-mapping>

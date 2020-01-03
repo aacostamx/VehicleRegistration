@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" assembly="Inkript.VR.Models" namespace="Inkript.VR.Models">
+
+  <sql-query name="UpdateDraftApplication">
+
+    exec UpdateDraftApplication @DraftApplicationId=:DraftApplicationId, @BranchId=:BranchId, @SectionId=:SectionId, @BusinessProcess=:BusinessProcess, @CarPlateInfo=:CarPlateInfo, @CarUniqueNumber=:CarUniqueNumber, @CarDetails=:CarDetails, @OwnerType=:OwnerType, @OwnersInfo=:OwnersInfo, @Fees=:Fees, @Documents=:Documents, @AutomaticallyCalculatedFees=:AutomaticallyCalculatedFees, @OutputDocuments=:OutputDocuments, @CreatedBy=:CreatedBy, @ProcessedBy=:ProcessedBy, @InvoicesNumbers=:InvoicesNumbers, @StatusId=:StatusId, @UpdatedBy=:UpdatedBy
+  </sql-query>
+
+</hibernate-mapping>

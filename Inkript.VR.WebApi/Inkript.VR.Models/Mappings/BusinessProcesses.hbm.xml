@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<hibernate-mapping assembly="Inkript.VR.Models" namespace="Inkript.VR.Models" xmlns="urn:nhibernate-mapping-2.2">
+  <class name="BusinessProcesses" table="BusinessProcesses" lazy="false" >
+    <id name="BPId" column="BPId">
+      <generator class="identity" />
+    </id>
+    <property name="BPNameEn">
+      <column name="BPNameEn" sql-type="nvarchar" not-null="false" />
+    </property>
+    <property name="BPNameAr">
+      <column name="BPNameAr" sql-type="nvarchar" not-null="false" />
+    </property>
+    <property name="BPType">
+      <column name="BPType" sql-type="nvarchar" not-null="false" />
+    </property>
+    <property name="Icon">
+      <column name="Icon" sql-type="nvarchar" not-null="false" />
+    </property>
+    <property name="HotKey">
+      <column name="HotKey" sql-type="nvarchar" not-null="false" />
+    </property>
+    <property name="BPUrl">
+      <column name="BPUrl" sql-type="nvarchar" not-null="false" />
+    </property>
+    <property name="CarStatusId">
+      <column name="CarStatusId" sql-type="int" not-null="false" />
+    </property>
+    <property name="StatusId">
+      <column name="StatusId" sql-type="int" not-null="true" />
+    </property>
+    <bag name="BPFee" inverse="true" lazy="false">
+      <key column="BPId" />
+      <one-to-many class="BPFee" />
+    </bag>
+    <bag name="BPOutputRel" inverse="true" lazy="false">
+      <key column="BPId" />
+      <one-to-many class="BPOutputRel" />
+    </bag>
+    <bag name="BPRelationships" inverse="true" lazy="false">
+      <key column="BPId" />
+      <one-to-many class="BPRelationships" />
+    </bag>
+    <bag name="BPSectorVehicle" inverse="true" lazy="false">
+      <key column="BPId" />
+      <one-to-many class="BPSectorVehicle" />
+    </bag>
+    <bag name="DocumentProcessRelationship" inverse="true" lazy="false">
+      <key column="BPId" />
+      <one-to-many class="DocumentProcessRelationship" />
+    </bag>
+    <bag name="OutputGroup" inverse="true" lazy="false">
+      <key column="BPId" />
+      <one-to-many class="OutputGroup" />
+    </bag>
+  </class>
+</hibernate-mapping>

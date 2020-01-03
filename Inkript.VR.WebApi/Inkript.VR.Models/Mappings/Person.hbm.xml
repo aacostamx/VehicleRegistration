@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<hibernate-mapping assembly="Inkript.VR.Models" namespace="Inkript.VR.Models" xmlns="urn:nhibernate-mapping-2.2">
+  <class name="Person" table="Person" lazy="false" >
+    <id name="PersonId" column="PersonId">
+      <generator class="identity" />
+    </id>
+    <property name="CityId">
+      <column name="CityId" sql-type="int" not-null="true" />
+    </property>
+    <property name="DrivingLicenseId">
+      <column name="DrivingLicenseId" sql-type="int" not-null="false" />
+    </property>
+    <property name="NationalId">
+      <column name="NationalId" sql-type="int" not-null="false" />
+    </property>
+    <property name="FirstName">
+      <column name="FirstName" sql-type="nvarchar" not-null="true" />
+    </property>
+    <property name="MiddleName">
+      <column name="MiddleName" sql-type="nvarchar" not-null="true" />
+    </property>
+    <property name="LastName">
+      <column name="LastName" sql-type="nvarchar" not-null="true" />
+    </property>
+    <property name="MotherName">
+      <column name="MotherName" sql-type="nvarchar" not-null="true" />
+    </property>
+    <property name="MotherMaidenName">
+      <column name="MotherMaidenName" sql-type="nvarchar" not-null="true" />
+    </property>
+    <property name="DateOfBirth">
+      <column name="DateOfBirth" sql-type="date" not-null="true" />
+    </property>
+    <property name="CityOfBirth">
+      <column name="CityOfBirth" sql-type="nvarchar" not-null="true" />
+    </property>
+    <property name="CountryOfBirth">
+      <column name="CountryOfBirth" sql-type="nvarchar" not-null="true" />
+    </property>
+    <property name="Street">
+      <column name="Street" sql-type="nvarchar" not-null="true" />
+    </property>
+    <property name="Building">
+      <column name="Building" sql-type="nvarchar" not-null="true" />
+    </property>
+    <property name="Floor">
+      <column name="Floor" sql-type="int" not-null="false" />
+    </property>
+    <property name="PIN">
+      <column name="PIN" sql-type="nvarchar" not-null="false" />
+    </property>
+    <property name="AddressDetails">
+      <column name="AddressDetails" sql-type="nvarchar" not-null="false" />
+    </property>
+    <property name="NumberOfRegistry">
+      <column name="NumberOfRegistry" sql-type="nvarchar" not-null="true" />
+    </property>
+    <property name="Phone">
+      <column name="Phone" sql-type="nvarchar" not-null="true" />
+    </property>
+  </class>
+</hibernate-mapping>

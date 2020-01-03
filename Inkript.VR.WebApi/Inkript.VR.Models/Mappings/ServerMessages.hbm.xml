@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<hibernate-mapping assembly="Inkript.VR.Models" namespace="Inkript.VR.Models" xmlns="urn:nhibernate-mapping-2.2">
+  <class name="ServerMessages" table="ServerMessages" lazy="false" >
+    <id name="ServerMessagesId" column="ServerMessagesId">
+      <generator class="identity" />
+    </id>
+    <property name="Code">
+      <column name="Code" sql-type="nvarchar" not-null="false" />
+    </property>
+    <property name="Type">
+      <column name="Type" sql-type="nvarchar" not-null="false" />
+    </property>
+    <property name="Arabic">
+      <column name="Arabic" sql-type="nvarchar" not-null="false" />
+    </property>
+    <property name="English">
+      <column name="English" sql-type="nvarchar" not-null="false" />
+    </property>
+  </class>
+</hibernate-mapping>

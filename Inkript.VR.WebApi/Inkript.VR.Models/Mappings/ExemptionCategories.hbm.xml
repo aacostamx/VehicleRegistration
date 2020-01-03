@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<hibernate-mapping assembly="Inkript.VR.Models" namespace="Inkript.VR.Models" xmlns="urn:nhibernate-mapping-2.2">
+  <class name="ExemptionCategories" table="ExemptionCategories" lazy="false" >
+    <id name="ExemptionCategoryId" column="ExemptionCategoryId">
+      <generator class="identity" />
+    </id>
+    <property name="ExemptionCategoryDescEn">
+      <column name="ExemptionCategoryDescEn" sql-type="nvarchar" not-null="true" />
+    </property>
+    <property name="ExemptionCategoryDescAr">
+      <column name="ExemptionCategoryDescAr" sql-type="nvarchar" not-null="true" />
+    </property>
+    <bag name="ExemptedFees" inverse="true" lazy="false">
+      <key column="ExemptedCategoryId" />
+      <one-to-many class="ExemptedFees" />
+    </bag>
+  </class>
+</hibernate-mapping>

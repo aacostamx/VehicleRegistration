@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<hibernate-mapping assembly="Inkript.VR.Models" namespace="Inkript.VR.Models" xmlns="urn:nhibernate-mapping-2.2">
+  <class name="CarUniqueNumber" table="CarUniqueNumber" lazy="false" >
+    <id name="CarUniqueNumberVal" column="CarUniqueNumber">
+      <generator class="identity" />
+    </id>
+    <many-to-one name="TRIM">
+      <column name="TrimId" sql-type="int" not-null="false" />
+    </many-to-one>
+    <many-to-one name="Model">
+      <column name="ModelId" sql-type="int" not-null="true" />
+    </many-to-one>
+    <many-to-one name="Brand">
+      <column name="BrandId" sql-type="int" not-null="true" />
+    </many-to-one>
+    <property name="Chassis">
+      <column name="Chassis" sql-type="nvarchar" not-null="true" />
+    </property>
+  </class>
+</hibernate-mapping>

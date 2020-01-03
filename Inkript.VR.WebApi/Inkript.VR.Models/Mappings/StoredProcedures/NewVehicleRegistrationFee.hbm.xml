@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" assembly="Inkript.VR.Models" namespace="Inkript.VR.Models">
+
+  <sql-query name="NewVehicleRegistrationFee">
+    <return-scalar column="VehicleValue" type="Double"/>
+    <return-scalar column="CustomsTax" type="Double"/>
+    <return-scalar column="StampFee" type="Double"/>
+    <return-scalar column="OperationFee" type="Double"/>
+    <return-scalar column="Total" type="Double"/>
+
+    exec NewVehicleRegistrationFee @CertificateId=:CertificateId
+  </sql-query>
+
+</hibernate-mapping>

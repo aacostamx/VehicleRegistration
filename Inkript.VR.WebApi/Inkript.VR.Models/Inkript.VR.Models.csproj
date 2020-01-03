@@ -1,0 +1,397 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{40C918D7-C27E-4907-819F-8CFBBE6CCE42}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Inkript.VR.Models</RootNamespace>
+    <AssemblyName>Inkript.VR.Models</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="CustomModels\Application\CarPlateInfo.cs" />
+    <Compile Include="CustomModels\Application\DocumentsApplication.cs" />
+    <Compile Include="CustomModels\Application\InsuranceApplication.cs" />
+    <Compile Include="CustomModels\Application\VehicleDetailsApplication.cs" />
+    <Compile Include="CustomModels\Application\VehicleSearch.cs" />
+    <Compile Include="CustomModels\BlueBook.cs" />
+    <Compile Include="CustomModels\CustomsInfo.cs" />
+    <Compile Include="CustomModels\Enums\FlagNumberGeneration.cs" />
+    <Compile Include="CustomModels\Enums\FlagFeeTypes.cs" />
+    <Compile Include="CustomModels\Enums\FlagCalledFrom.cs" />
+    <Compile Include="CustomModels\Enums\FlagFuelType.cs" />
+    <Compile Include="CustomModels\Enums\FlagOwnerTypes.cs" />
+    <Compile Include="CustomModels\Enums\FlagRegistered.cs" />
+    <Compile Include="CustomModels\Enums\FlagStatusCode.cs" />
+    <Compile Include="CustomModels\Application\FeeByCategory.cs" />
+    <Compile Include="CustomModels\Application\InvoiceNumberApplication.cs" />
+    <Compile Include="CustomModels\Enums\FlagTruckType.cs" />
+    <Compile Include="CustomModels\Enums\FlagVehicleType.cs" />
+    <Compile Include="CustomModels\JsonBP.cs" />
+    <Compile Include="CustomModels\DocumentCustom.cs" />
+    <Compile Include="CustomModels\DocumentList.cs" />
+    <Compile Include="CustomModels\Enums\FlagCarStatus.cs" />
+    <Compile Include="CustomModels\Enums\FlagStatus.cs" />
+    <Compile Include="CustomModels\GenericPagedList.cs" />
+    <Compile Include="CustomModels\Owners.cs" />
+    <Compile Include="CustomModels\PoolInfo.cs" />
+    <Compile Include="CustomModels\PrivateRUFDues.cs" />
+    <Compile Include="CustomModels\RegisteredVehiclesPlain.cs" />
+    <Compile Include="CustomModels\SecondaryBusinessProcesses.cs" />
+    <Compile Include="CustomModels\StampFee.cs" />
+    <Compile Include="CustomModels\Application\VehicleDetails.cs" />
+    <Compile Include="Models\AppConfigCommit.cs" />
+    <Compile Include="Models\AppDocInputs.cs" />
+    <Compile Include="Models\ApplicationDocuments.cs" />
+    <Compile Include="Models\AuditActivities.cs" />
+    <Compile Include="Models\AuditLog.cs" />
+    <Compile Include="Models\Bank.cs" />
+    <Compile Include="Models\BPFee.cs" />
+    <Compile Include="Models\BPOutput.cs" />
+    <Compile Include="Models\BPOutputRel.cs" />
+    <Compile Include="Models\BPRelationships.cs" />
+    <Compile Include="Models\BPSectorVehicle.cs" />
+    <Compile Include="Models\Branches.cs" />
+    <Compile Include="Models\Brand.cs" />
+    <Compile Include="Models\BusinessProcesses.cs" />
+    <Compile Include="Models\CalculatedFees.cs" />
+    <Compile Include="Models\DocumentGroups.cs" />
+    <Compile Include="Models\PrivateLogRUFPayment.cs" />
+    <Compile Include="Models\SectorVehicleTypeRel.cs" />
+    <Compile Include="Models\SubmitOrder.cs" />
+    <Compile Include="Models\SubmitOrderFee.cs" />
+    <Compile Include="Models\VehicleCategTypeSect.cs" />
+    <Compile Include="Models\VehicleHolds.cs" />
+    <Compile Include="Models\VehicleOwnership.cs" />
+    <Compile Include="Models\CarStatus.cs" />
+    <Compile Include="Models\CarUniqueNumber.cs" />
+    <Compile Include="Models\Cities.cs" />
+    <Compile Include="Models\Colors.cs" />
+    <Compile Include="Models\CompanyCategory.cs" />
+    <Compile Include="Models\CompanyClass.cs" />
+    <Compile Include="Models\CustomsOffices.cs" />
+    <Compile Include="Models\Districts.cs" />
+    <Compile Include="Models\DocumentInput.cs" />
+    <Compile Include="Models\DocumentProcessRelationship.cs" />
+    <Compile Include="Models\Documents.cs" />
+    <Compile Include="Models\Application.cs" />
+    <Compile Include="Models\ExemptedFees.cs" />
+    <Compile Include="Models\ExemptionCategories.cs" />
+    <Compile Include="Models\FeeCategory.cs" />
+    <Compile Include="Models\Fees.cs" />
+    <Compile Include="Models\FileInfoCustoms.cs" />
+    <Compile Include="Models\FileInfoInspections.cs" />
+    <Compile Include="Models\FORM.cs" />
+    <Compile Include="Models\FuelTypes.cs" />
+    <Compile Include="Models\Governate.cs" />
+    <Compile Include="Models\HoldTypeCategRel.cs" />
+    <Compile Include="Models\HoldTypes.cs" />
+    <Compile Include="Models\ImportCustoms.cs" />
+    <Compile Include="Models\ImportInspections.cs" />
+    <Compile Include="Models\Insurance.cs" />
+    <Compile Include="Models\InvoiceNumber.cs" />
+    <Compile Include="Models\LicenseOwnership.cs" />
+    <Compile Include="Models\LockedCategory.cs" />
+    <Compile Include="Models\Model.cs" />
+    <Compile Include="Models\Organization.cs" />
+    <Compile Include="Models\OutputGroup.cs" />
+    <Compile Include="Models\OwnerType.cs" />
+    <Compile Include="Models\Person.cs" />
+    <Compile Include="Models\PlateCodes.cs" />
+    <Compile Include="Models\PlateNumberPool.cs" />
+    <Compile Include="Models\PlateRanges.cs" />
+    <Compile Include="CustomModels\GenerateRandomNumber.cs" />
+    <Compile Include="Models\Regions.cs" />
+    <Compile Include="Models\RegisteredVehicles.cs" />
+    <Compile Include="Models\Views\ExemptedFeesActive.cs" />
+    <Compile Include="Models\Views\RegisteredVehicleTypes.cs" />
+    <Compile Include="Models\Section.cs" />
+    <Compile Include="Models\Sectors.cs" />
+    <Compile Include="Models\Views\SectorsLimit.cs" />
+    <Compile Include="Models\SectorWarningLimit.cs" />
+    <Compile Include="Models\ServerMessages.cs" />
+    <Compile Include="Models\Status.cs" />
+    <Compile Include="Models\ThirdParties.cs" />
+    <Compile Include="Models\TRIM.cs" />
+    <Compile Include="Models\TrunkType.cs" />
+    <Compile Include="Models\Utilization.cs" />
+    <Compile Include="Models\VehicleCategory.cs" />
+    <Compile Include="Models\VehicleHold.cs" />
+    <Compile Include="Models\VehicleRegistration.cs" />
+    <Compile Include="Models\VehicleRegistrationFee.cs" />
+    <Compile Include="Models\VehicleTypes.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Mappings\ImportCustoms.hbm.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Mappings\ImportInspections.hbm.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Mappings\FileInfoInspections.hbm.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Mappings\ServerMessages.hbm.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Mappings\BPFee.hbm.xml" />
+    <EmbeddedResource Include="Mappings\BPOutput.hbm.xml" />
+    <EmbeddedResource Include="Mappings\BPRelationships.hbm.xml" />
+    <EmbeddedResource Include="Mappings\BusinessProcesses.hbm.xml" />
+    <EmbeddedResource Include="Mappings\DocumentProcessRelationship.hbm.xml" />
+    <EmbeddedResource Include="Mappings\Documents.hbm.xml">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Mappings\ExemptedFees.hbm.xml" />
+    <EmbeddedResource Include="Mappings\ExemptionCategories.hbm.xml" />
+    <EmbeddedResource Include="Mappings\Fees.hbm.xml" />
+    <EmbeddedResource Include="Mappings\OutputGroup.hbm.xml" />
+    <EmbeddedResource Include="Mappings\Sectors.hbm.xml" />
+    <EmbeddedResource Include="Mappings\VehicleTypes.hbm.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Mappings\StoredProcedures\VehicleTypesFilter.hbm.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Mappings\StoredProcedures\SectorsFilter.hbm.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Mappings\StoredProcedures\FeesFilter.hbm.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Mappings\StoredProcedures\BusinessProcessesFilter.hbm.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Mappings\StoredProcedures\ImportInspectionsFilter.hbm.xml">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Mappings\StoredProcedures\ImportCustomsFilter.hbm.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Mappings\PlateNumberPool.hbm.xml" />
+    <EmbeddedResource Include="Mappings\PlateRanges.hbm.xml" />
+    <EmbeddedResource Include="Mappings\SectorWarningLimit.hbm.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Mappings\StoredProcedures\CheckPlateNumberPool.hbm.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Mappings\Person.hbm.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Mappings\StoredProcedures\PersonFilter.hbm.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Mappings\Organization.hbm.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Mappings\StoredProcedures\NewVehicleRegistrationFee.hbm.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Mappings\StoredProcedures\NewVehicleRegistration.hbm.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Mappings\StoredProcedures\GenerateRandomNumber.hbm.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Mappings\Colors.hbm.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Mappings\FuelTypes.hbm.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Mappings\Application.hbm.xml">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Mappings\DocumentInput.hbm.xml" />
+    <EmbeddedResource Include="Mappings\InvoiceNumber.hbm.xml" />
+    <EmbeddedResource Include="Mappings\PlateCodes.hbm.xml" />
+    <EmbeddedResource Include="Mappings\RegisteredVehicles.hbm.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Mappings\CarUniqueNumber.hbm.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Mappings\StoredProcedures\PlateRangesFilter.hbm.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Mappings\Cities.hbm.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Mappings\Districts.hbm.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Mappings\Regions.hbm.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Mappings\StoredProcedures\GetCarValueByCustomsCertificationId.hbm.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Mappings\StoredProcedures\F13EngineReplacement.hbm.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Mappings\StoredProcedures\F14TrunkReplacement.hbm.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Mappings\StoredProcedures\F8FreightWeightDifference.hbm.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Mappings\StoredProcedures\F7PublicPlateRegistration.hbm.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Mappings\StoredProcedures\F4RegistrationPrivate.hbm.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Mappings\StoredProcedures\F4PenaltiesTaxes.hbm.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Mappings\StoredProcedures\F3RegistrationPublic.hbm.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Mappings\StoredProcedures\F9NumberOfPassengersDifference.hbm.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Mappings\StoredProcedures\GetCarValueEstimationByCarSpecs.hbm.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Mappings\StoredProcedures\DraftApplicationFilter.hbm.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Mappings\StoredProcedures\UpdateDraftApplication.hbm.xml">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Mappings\Status.hbm.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Mappings\FeeCategory.hbm.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Mappings\StoredProcedures\CreatePlateRange.hbm.xml">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Mappings\Branches.hbm.xml" />
+    <EmbeddedResource Include="Mappings\Brand.hbm.xml" />
+    <EmbeddedResource Include="Mappings\CarStatus.hbm.xml" />
+    <EmbeddedResource Include="Mappings\CompanyCategory.hbm.xml" />
+    <EmbeddedResource Include="Mappings\CompanyClass.hbm.xml" />
+    <EmbeddedResource Include="Mappings\FORM.hbm.xml" />
+    <EmbeddedResource Include="Mappings\Governate.hbm.xml" />
+    <EmbeddedResource Include="Mappings\Model.hbm.xml" />
+    <EmbeddedResource Include="Mappings\OwnerType.hbm.xml" />
+    <EmbeddedResource Include="Mappings\Section.hbm.xml" />
+    <EmbeddedResource Include="Mappings\TRIM.hbm.xml" />
+    <EmbeddedResource Include="Mappings\Utilization.hbm.xml" />
+    <EmbeddedResource Include="Mappings\VehicleCategory.hbm.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Mappings\Views\SectorsLimit.hbm.xml">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Mappings\AppDocInputs.hbm.xml" />
+    <EmbeddedResource Include="Mappings\ApplicationDocuments.hbm.xml" />
+    <EmbeddedResource Include="Mappings\Bank.hbm.xml" />
+    <EmbeddedResource Include="Mappings\BPOutputRel.hbm.xml" />
+    <EmbeddedResource Include="Mappings\VehicleOwnership.hbm.xml" />
+    <EmbeddedResource Include="Mappings\CustomsOffices.hbm.xml" />
+    <EmbeddedResource Include="Mappings\HoldTypeCategRel.hbm.xml" />
+    <EmbeddedResource Include="Mappings\HoldTypes.hbm.xml" />
+    <EmbeddedResource Include="Mappings\Insurance.hbm.xml" />
+    <EmbeddedResource Include="Mappings\LicenseOwnership.hbm.xml" />
+    <EmbeddedResource Include="Mappings\LockedCategory.hbm.xml" />
+    <EmbeddedResource Include="Mappings\ThirdParties.hbm.xml" />
+    <EmbeddedResource Include="Mappings\VehicleHold.hbm.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Mappings\TrunkType.hbm.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Mappings\Views\RegisteredVehicleTypes.hbm.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Mappings\FileInfoCustoms.hbm.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Mappings\StoredProcedures\GetSecondaryBusinessProcessesBy.hbm.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Mappings\StoredProcedures\GetRegisteredCarBy.hbm.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Mappings\CalculatedFees.hbm.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Mappings\BPSectorVehicle.hbm.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Mappings\Views\ExemptedFeesActive.hbm.xml" />
+    <EmbeddedResource Include="Mappings\StoredProcedures\GetApplications.hbm.xml">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Mappings\StoredProcedures\GenerateInvoiceNumber.hbm.xml" />
+    <EmbeddedResource Include="Mappings\StoredProcedures\OrganizationFilter.hbm.xml" />
+    <EmbeddedResource Include="Mappings\StoredProcedures\F19FeeStamp.hbm.xml" />
+    <EmbeddedResource Include="Mappings\DocumentGroup.hbm.xml">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Mappings\AppConfigCommit.hbm.xml" />
+    <EmbeddedResource Include="Mappings\SectorVehicleTypeRel.hbm.xml" />
+    <EmbeddedResource Include="Mappings\StoredProcedures\GetSectorsByVehicleType.hbm.xml" />
+    <EmbeddedResource Include="Mappings\AuditActivities.hbm.xml" />
+    <EmbeddedResource Include="Mappings\AuditLog.hbm.xml" />
+    <Content Include="Mappings\VehicleCategTypeSect.hbm.xml" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

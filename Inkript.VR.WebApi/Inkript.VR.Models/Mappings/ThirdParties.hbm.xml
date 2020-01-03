@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<hibernate-mapping assembly="Inkript.VR.Models" namespace="Inkript.VR.Models" xmlns="urn:nhibernate-mapping-2.2">
+  <class name="ThirdParties" table="ThirdParties" lazy="false" >
+    <id name="ThirdPartyId" column="ThirdPartyId">
+      <generator class="identity" />
+    </id>
+    <property name="ThirdPartyName">
+      <column name="ThirdPartyName" sql-type="nvarchar" not-null="true" />
+    </property>
+  </class>
+</hibernate-mapping>

@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<hibernate-mapping assembly="Inkript.VR.Models" namespace="Inkript.VR.Models" xmlns="urn:nhibernate-mapping-2.2">
+  <class name="PlateRanges" table="PlateRanges" lazy="false" >
+    <id name="PlateRangeId" column="PlateRangeId">
+      <generator class="identity" />
+    </id>
+    <property name="RangeName">
+      <column name="RangeName" sql-type="nvarchar" not-null="false" />
+    </property>
+    <property name="StartNumber">
+      <column name="StartNumber" sql-type="int" not-null="true" />
+    </property>
+    <property name="EndNumber">
+      <column name="EndNumber" sql-type="int" not-null="true" />
+    </property>
+    <property name="TotalAvailable">
+      <column name="TotalAvailable" sql-type="int" not-null="false" />
+    </property>
+    <property name="SectorId">
+      <column name="SectorId" sql-type="int" not-null="false" />
+    </property>
+    <property name="VehicleTypeId">
+      <column name="VehicleTypeId" sql-type="int" not-null="false" />
+    </property>
+    <property name="PlateCodeId">
+      <column name="PlateCodeId" sql-type="int" not-null="true" />
+    </property>
+    <property name="BranchId">
+      <column name="BranchId" sql-type="int" not-null="false" />
+    </property>
+    <property name="SQLSequence">
+      <column name="SQLSequence" sql-type="nvarchar" not-null="false" />
+    </property>
+    <property name="StatusId">
+      <column name="StatusId" sql-type="int" not-null="true" />
+    </property>
+    <property name="PriorityLevel">
+      <column name="PriorityLevel" sql-type="int" not-null="false" />
+    </property>
+    <property name="CreatedBy">
+      <column name="CreatedBy" sql-type="int" not-null="false" />
+    </property>
+    <property name="UpdatedBy">
+      <column name="UpdatedBy" sql-type="int" not-null="false" />
+    </property>
+    <property name="CreatedDate">
+      <column name="CreatedDate" sql-type="datetime" not-null="false" />
+    </property>
+    <property name="ModifiedDate">
+      <column name="ModifiedDate" sql-type="datetime" not-null="false" />
+    </property>
+    <property name="Prefix">
+      <column name="Prefix" sql-type="nvarchar" not-null="false" />
+    </property>
+    <property name="DiplomaticLevel">
+      <column name="DiplomaticLevel" sql-type="nvarchar" not-null="false" />
+    </property>
+    <bag name="PlateNumberPool" inverse="true" lazy="false">
+      <key column="PlateRangeId" />
+      <one-to-many class="PlateNumberPool" />
+    </bag>
+  </class>
+</hibernate-mapping>

@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<hibernate-mapping assembly="Inkript.VR.Models" namespace="Inkript.VR.Models" xmlns="urn:nhibernate-mapping-2.2">
+  <class name="Organization" table="Organization" lazy="false" >
+    <id name="OrganizationId" column="OrganizationId">
+      <generator class="identity" />
+    </id>
+    <property name="SectorId">
+      <column name="SectorId" sql-type="int" not-null="true" />
+    </property>
+    <property name="CompanyClassId">
+      <column name="CompanyClassId" sql-type="int" not-null="true" />
+    </property>
+    <property name="CompanyCategoryId">
+      <column name="CompanyCategoryId" sql-type="int" not-null="true" />
+    </property>
+    <property name="RegionId">
+      <column name="RegionId" sql-type="int" not-null="true" />
+    </property>
+    <many-to-one name="Status">
+      <column name="StatusId" sql-type="int" not-null="true" />
+    </many-to-one>
+    <property name="OrganizationName">
+      <column name="OrganizationName" sql-type="nvarchar" not-null="true" />
+    </property>
+    <property name="RegistrationNumber">
+      <column name="RegistrationNumber" sql-type="nvarchar" not-null="true" />
+    </property>
+    <property name="RegisterRegionId">
+      <column name="RegisterRegionId" sql-type="int" not-null="true" />
+    </property>
+    <property name="MOFNumber">
+      <column name="MOFNumber" sql-type="nvarchar" not-null="true" />
+    </property>
+    <property name="Street">
+      <column name="Street" sql-type="nvarchar" not-null="false" />
+    </property>
+    <property name="Building">
+      <column name="Building" sql-type="nvarchar" not-null="true" />
+    </property>
+  </class>
+</hibernate-mapping>

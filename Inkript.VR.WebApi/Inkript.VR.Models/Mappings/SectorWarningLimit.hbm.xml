@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<hibernate-mapping assembly="Inkript.VR.Models" namespace="Inkript.VR.Models" xmlns="urn:nhibernate-mapping-2.2">
+  <class name="SectorWarningLimit" table="SectorWarningLimit" lazy="false" >
+    <composite-id>
+      <key-property name="VehicleTypeId" column="VehicleTypeId" />
+      <key-property name="SectorId" column="SectorId" />
+      <key-property name="PlateCodeId" column="PlateCodeId" />
+    </composite-id>
+    <property name="WarningLimit">
+      <column name="WarningLimit" sql-type="nvarchar" not-null="true" />
+    </property>
+  </class>
+</hibernate-mapping>

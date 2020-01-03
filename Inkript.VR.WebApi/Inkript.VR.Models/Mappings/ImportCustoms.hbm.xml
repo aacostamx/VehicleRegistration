@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<hibernate-mapping assembly="Inkript.VR.Models" namespace="Inkript.VR.Models" xmlns="urn:nhibernate-mapping-2.2">
+  <class name="ImportCustoms" table="ImportCustoms" lazy="false" >
+    <id name="ImportCustomId" column="ImportCustomId">
+      <generator class="identity" />
+    </id>
+    <many-to-one name="FileInfoCustoms">
+      <column name="FileInfoCustomId" sql-type="int" not-null="true" />
+    </many-to-one>
+    <property name="CertificateDate">
+      <column name="CertificateDate" sql-type="date" not-null="false" />
+    </property>
+    <property name="OperationType">
+      <column name="OperationType" sql-type="nvarchar" not-null="false" />
+    </property>
+    <property name="CertificateId">
+      <column name="CertificateId" sql-type="nvarchar" not-null="false" />
+    </property>
+    <property name="FiscalYear">
+      <column name="FiscalYear" sql-type="int" not-null="false" />
+    </property>
+    <property name="ImporterCode">
+      <column name="ImporterCode" sql-type="nvarchar" not-null="false" />
+    </property>
+    <property name="ImporterName">
+      <column name="ImporterName" sql-type="nvarchar" not-null="false" />
+    </property>
+    <property name="BrandId">
+      <column name="BrandId" sql-type="int" not-null="false" />
+    </property>
+    <property name="BrandDesc">
+      <column name="BrandDesc" sql-type="nvarchar" not-null="false" />
+    </property>
+    <property name="ModelId">
+      <column name="ModelId" sql-type="int" not-null="false" />
+    </property>
+    <property name="ModelDesc">
+      <column name="ModelDesc" sql-type="nvarchar" not-null="false" />
+    </property>
+    <property name="ProductionYear">
+      <column name="ProductionYear" sql-type="int" not-null="false" />
+    </property>
+    <property name="ColorId">
+      <column name="ColorId" sql-type="int" not-null="false" />
+    </property>
+    <property name="ColorDesc">
+      <column name="ColorDesc" sql-type="nvarchar" not-null="false" />
+    </property>
+    <property name="Chassis">
+      <column name="Chassis" sql-type="nvarchar" not-null="false" />
+    </property>
+    <property name="MotorNumber">
+      <column name="MotorNumber" sql-type="nvarchar" not-null="false" />
+    </property>
+    <property name="Comments">
+      <column name="Comments" sql-type="nvarchar" not-null="false" />
+    </property>
+    <property name="CreatedDate">
+      <column name="CreatedDate" sql-type="datetime" not-null="false" />
+    </property>
+    <property name="DateModified">
+      <column name="DateModified" sql-type="datetime" not-null="false" />
+    </property>
+    <property name="Value">
+      <column name="Value" sql-type="float" not-null="false" />
+    </property>
+    <property name="Taxes">
+      <column name="Taxes" sql-type="float" not-null="false" />
+    </property>
+    <property name="Cylinders">
+      <column name="Cylinders" sql-type="int" not-null="false" />
+    </property>
+    <property name="OfficeId">
+      <column name="OfficeId" sql-type="int" not-null="false" />
+    </property>
+    <property name="Discounted">
+      <column name="Discounted" sql-type="int" not-null="false" />
+    </property>
+  </class>
+</hibernate-mapping>

@@ -1,0 +1,183 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{64F4BA81-A17E-4F23-BC08-4A5667CD8A9D}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Inkript.VR.Business</RootNamespace>
+    <AssemblyName>Inkript.VR.Business</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Inkript">
+      <HintPath>..\Inkript.VR.API\Assemblies\Inkript.dll</HintPath>
+    </Reference>
+    <Reference Include="Inkript.Json, Version=11.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Assemblies\Inkript.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="NHibernate, Version=4.1.0.4000, Culture=neutral, PublicKeyToken=aa95f207798dfdb4, processorArchitecture=MSIL">
+      <HintPath>..\packages\NHibernate.4.1.1.4000\lib\net40\NHibernate.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Data" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BusinessLayer\AppConfigCommitBLO.cs" />
+    <Compile Include="BusinessLayer\AuditActivitiesBLO.cs" />
+    <Compile Include="BusinessLayer\AuditLogBLO.cs" />
+    <Compile Include="BusinessLayer\CompanyCategoryBLO.cs" />
+    <Compile Include="BusinessLayer\DocumentGroupsBLO.cs" />
+    <Compile Include="BusinessLayer\ExemptionCategoriesBLO.cs" />
+    <Compile Include="BusinessLayer\PaymentSubmitBLO.cs" />
+    <Compile Include="BusinessLayer\PlateNumberPoolBLO.cs" />
+    <Compile Include="BusinessLayer\BlueBookBLO.cs" />
+    <Compile Include="BusinessLayer\BPFeeBLO.cs" />
+    <Compile Include="BusinessLayer\BPOutputBLO.cs" />
+    <Compile Include="BusinessLayer\BPSectorVehicleBLO.cs" />
+    <Compile Include="BusinessLayer\BranchesBLO.cs" />
+    <Compile Include="BusinessLayer\BrandBLO.cs" />
+    <Compile Include="BusinessLayer\BusinessProcessesBLO.cs" />
+    <Compile Include="BusinessLayer\CalculatedFeesBLO.cs" />
+    <Compile Include="BusinessLayer\CarStatusBLO.cs" />
+    <Compile Include="BusinessLayer\CarUniqueNumberBLO.cs" />
+    <Compile Include="BusinessLayer\ExemptedFeesBLO.cs" />
+    <Compile Include="BusinessLayer\FeeCategoryBLO.cs" />
+    <Compile Include="BusinessLayer\FormBLO.cs" />
+    <Compile Include="BusinessLayer\GovernateBLO.cs" />
+    <Compile Include="BusinessLayer\InvoiceNumberBLO.cs" />
+    <Compile Include="BusinessLayer\ModelBLO.cs" />
+    <Compile Include="BusinessLayer\RegionsBLO.cs" />
+    <Compile Include="BusinessLayer\DistrictsBLO.cs" />
+    <Compile Include="BusinessLayer\CitiesBLO.cs" />
+    <Compile Include="BusinessLayer\ColorsBLO.cs" />
+    <Compile Include="BusinessLayer\DocumentsBLO.cs" />
+    <Compile Include="BusinessLayer\ApplicationBLO.cs" />
+    <Compile Include="BusinessLayer\FeesBLO.cs" />
+    <Compile Include="BusinessLayer\FileInfoCustomsBLO.cs" />
+    <Compile Include="BusinessLayer\FileInfoInspectionsBLO.cs" />
+    <Compile Include="BusinessLayer\FuelTypesBLO.cs" />
+    <Compile Include="BusinessLayer\ImportCustomsBLO.cs" />
+    <Compile Include="BusinessLayer\ImportInspectionsBLO.cs" />
+    <Compile Include="BusinessLayer\OrganizationBLO.cs" />
+    <Compile Include="BusinessLayer\PersonBLO.cs" />
+    <Compile Include="BusinessLayer\PlateCodesBLO.cs" />
+    <Compile Include="BusinessLayer\PlateRangesBLO.cs" />
+    <Compile Include="BusinessLayer\RegisteredVehiclesBLO.cs" />
+    <Compile Include="BusinessLayer\SectorsBLO.cs" />
+    <Compile Include="BusinessLayer\SectorVehicleTypeRelBLO.cs" />
+    <Compile Include="BusinessLayer\ServerMessagesBLO.cs" />
+    <Compile Include="BusinessLayer\StatusBLO.cs" />
+    <Compile Include="BusinessLayer\TrimBLO.cs" />
+    <Compile Include="BusinessLayer\TrunkTypeBLO.cs" />
+    <Compile Include="BusinessLayer\UtilizationBLO.cs" />
+    <Compile Include="BusinessLayer\ValidatorBLO.cs" />
+    <Compile Include="BusinessLayer\VehicleCategoryBLO.cs" />
+    <Compile Include="BusinessLayer\VehicleRegistrationBLO.cs" />
+    <Compile Include="BusinessLayer\VehicleBLO.cs" />
+    <Compile Include="BusinessLayer\VehicleTypesBLO.cs" />
+    <Compile Include="DataAccessLayer\AppConfigCommitDAO.cs" />
+    <Compile Include="DataAccessLayer\AuditActivitiesDAO.cs" />
+    <Compile Include="DataAccessLayer\AuditLogDAO.cs" />
+    <Compile Include="DataAccessLayer\BPFeeDAO.cs" />
+    <Compile Include="DataAccessLayer\BPOutputDAO.cs" />
+    <Compile Include="DataAccessLayer\BPSectorVehicleDAO.cs" />
+    <Compile Include="DataAccessLayer\BranchesDAO.cs" />
+    <Compile Include="DataAccessLayer\BrandDAO.cs" />
+    <Compile Include="DataAccessLayer\BusinessProcessesDAO.cs" />
+    <Compile Include="DataAccessLayer\CalculatedFeesDAO.cs" />
+    <Compile Include="DataAccessLayer\CarStatusDAO.cs" />
+    <Compile Include="DataAccessLayer\CarUniqueNumberDAO.cs" />
+    <Compile Include="DataAccessLayer\CompanyCategoryDAO.cs" />
+    <Compile Include="DataAccessLayer\DistrictsDAO.cs" />
+    <Compile Include="DataAccessLayer\DocumentGroupsDAO.cs" />
+    <Compile Include="DataAccessLayer\ExemptedFeesDAO.cs" />
+    <Compile Include="DataAccessLayer\ExemptionCategoriesDAO.cs" />
+    <Compile Include="DataAccessLayer\FeeCategoryDAO.cs" />
+    <Compile Include="DataAccessLayer\FormDAO.cs" />
+    <Compile Include="DataAccessLayer\GovernateDAO.cs" />
+    <Compile Include="DataAccessLayer\InvoiceNumberDAO.cs" />
+    <Compile Include="DataAccessLayer\ModelDAO.cs" />
+    <Compile Include="DataAccessLayer\PlateNumberPoolDAO.cs" />
+    <Compile Include="DataAccessLayer\RegionsDAO.cs" />
+    <Compile Include="DataAccessLayer\CitiesDAO.cs" />
+    <Compile Include="DataAccessLayer\ColorsDAO.cs" />
+    <Compile Include="DataAccessLayer\DocumentsDAO.cs" />
+    <Compile Include="DataAccessLayer\ApplicationDAO.cs" />
+    <Compile Include="DataAccessLayer\FeesDAO.cs" />
+    <Compile Include="DataAccessLayer\FileInfoCustomsDAO.cs" />
+    <Compile Include="DataAccessLayer\FileInfoInspectionsDAO.cs" />
+    <Compile Include="DataAccessLayer\FuelTypesDAO.cs" />
+    <Compile Include="DataAccessLayer\GenericDAO.cs" />
+    <Compile Include="DataAccessLayer\ImportInspectionsDAO.cs" />
+    <Compile Include="DataAccessLayer\ImportCustomsDAO.cs" />
+    <Compile Include="DataAccessLayer\OrganizationDAO.cs" />
+    <Compile Include="DataAccessLayer\PersonDAO.cs" />
+    <Compile Include="DataAccessLayer\PlateCodesDAO.cs" />
+    <Compile Include="DataAccessLayer\PlateRangesDAO.cs" />
+    <Compile Include="DataAccessLayer\RegisteredVehiclesDAO.cs" />
+    <Compile Include="DataAccessLayer\SectorsDAO.cs" />
+    <Compile Include="DataAccessLayer\SectorVehicleTypeRelDAO.cs" />
+    <Compile Include="DataAccessLayer\ServerMessagesDAO.cs" />
+    <Compile Include="DataAccessLayer\StatusDAO.cs" />
+    <Compile Include="DataAccessLayer\TrimDAO.cs" />
+    <Compile Include="DataAccessLayer\TrunkTypeDAO.cs" />
+    <Compile Include="DataAccessLayer\UtilizationDAO.cs" />
+    <Compile Include="DataAccessLayer\VehicleCategoryDAO.cs" />
+    <Compile Include="DataAccessLayer\VehicleRegistrationDAO.cs" />
+    <Compile Include="DataAccessLayer\VehicleDAO.cs" />
+    <Compile Include="DataAccessLayer\VehicleTypesDAO.cs" />
+    <Compile Include="Helpers\DALException.cs" />
+    <Compile Include="Helpers\NHibernateHelper.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <ProjectReference Include="..\Inkript.VR.Models\Inkript.VR.Models.csproj">
+      <Project>{40c918d7-c27e-4907-819f-8cfbbe6cce42}</Project>
+      <Name>Inkript.VR.Models</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Assemblies\Inkript.Json.dll" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

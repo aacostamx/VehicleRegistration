@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" assembly="Inkript.VR.Models" namespace="Inkript.VR.Models">
+
+  <sql-query name="BusinessProcessesFilter">
+    <return-scalar column="BPId" type="Int32"/>
+    <return-scalar column="BPNameEn" type="String"/>
+    <return-scalar column="BPNameAr" type="String"/>
+    <return-scalar column="BPType" type="String"/>
+    <return-scalar column="Icon" type="String"/>
+    <return-scalar column="HotKey" type="String"/>
+    <return-scalar column="CarStatusId" type="Int32"/>
+    <return-scalar column="StatusId" type="Int32"/>
+    exec BusinessProcessesFilter :search
+  </sql-query>
+
+</hibernate-mapping>

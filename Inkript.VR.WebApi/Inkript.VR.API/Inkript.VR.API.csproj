@@ -1,0 +1,456 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.Default.props" Condition="Exists('$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.Default.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{6B89B4B1-2871-4A39-B1B7-52C934D5EBD5}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Inkript.VR.API</RootNamespace>
+    <AssemblyName>Inkript.VR.API</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <MvcBuildViews>false</MvcBuildViews>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <Use64BitIISExpress />
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+    <TypeScriptToolsVersion>2.5</TypeScriptToolsVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Inkript, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL" />
+    <Reference Include="InkriptMapper, Version=7.0.0.0, Culture=neutral, PublicKeyToken=be96cd2c38ef1005, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Assemblies\InkriptMapper.dll</HintPath>
+    </Reference>
+    <Reference Include="InkriptRest, Version=106.0.0.0, Culture=neutral, PublicKeyToken=598062e77f915f75, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Assemblies\InkriptRest.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="netstandard, Version=2.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51" />
+    <Reference Include="Newtonsoft.Json, Version=10.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.10.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="Swashbuckle.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=cd1bb07a5ac7c7bc, processorArchitecture=MSIL">
+      <HintPath>..\packages\Swashbuckle.Core.5.6.0\lib\net40\Swashbuckle.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data.Entity" />
+    <Reference Include="System.Net.Http.Formatting, Version=5.2.3.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Client.5.2.3\lib\net45\System.Net.Http.Formatting.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Cors, Version=5.2.3.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.Cors.5.2.3\lib\net45\System.Web.Cors.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Http, Version=5.2.3.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Core.5.2.3\lib\net45\System.Web.Http.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.Http.Cors, Version=5.2.3.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Cors.5.2.3\lib\net45\System.Web.Http.Cors.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Http.WebHost, Version=5.2.3.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.WebHost.5.2.3\lib\net45\System.Web.Http.WebHost.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.Mvc, Version=5.2.3.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.Mvc.5.2.3\lib\net45\System.Web.Mvc.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.WebPages, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.WebPages.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.WebPages.Razor.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Routing" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http">
+    </Reference>
+    <Reference Include="System.Web.Optimization">
+      <HintPath>..\packages\Microsoft.AspNet.Web.Optimization.1.0.0\lib\net40\System.Web.Optimization.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Data.Edm, Version=5.2.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.Data.Edm.5.2.0\lib\net40\Microsoft.Data.Edm.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Spatial, Version=5.2.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\System.Spatial.5.2.0\lib\net40\System.Spatial.dll</HintPath>
+    </Reference>
+    <Reference Include="WebActivatorEx, Version=2.0.0.0, Culture=neutral, PublicKeyToken=7b26dc2a43f6a0d4, processorArchitecture=MSIL">
+      <HintPath>..\packages\WebActivatorEx.2.0\lib\net40\WebActivatorEx.dll</HintPath>
+    </Reference>
+    <Reference Include="Antlr3.Runtime">
+      <Private>True</Private>
+      <HintPath>..\packages\WebGrease.1.3.0\lib\Antlr3.Runtime.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="App_Start\SwaggerConfig.cs" />
+    <Compile Include="App_Start\WebApiConfig.cs" />
+    <Compile Include="Areas\HelpPage\ApiDescriptionExtensions.cs" />
+    <Compile Include="Areas\HelpPage\App_Start\HelpPageConfig.cs" />
+    <Compile Include="Areas\HelpPage\Controllers\HelpController.cs" />
+    <Compile Include="Areas\HelpPage\HelpPageAreaRegistration.cs" />
+    <Compile Include="Areas\HelpPage\HelpPageConfigurationExtensions.cs" />
+    <Compile Include="Areas\HelpPage\ModelDescriptions\CollectionModelDescription.cs" />
+    <Compile Include="Areas\HelpPage\ModelDescriptions\ComplexTypeModelDescription.cs" />
+    <Compile Include="Areas\HelpPage\ModelDescriptions\DictionaryModelDescription.cs" />
+    <Compile Include="Areas\HelpPage\ModelDescriptions\EnumTypeModelDescription.cs" />
+    <Compile Include="Areas\HelpPage\ModelDescriptions\EnumValueDescription.cs" />
+    <Compile Include="Areas\HelpPage\ModelDescriptions\IModelDocumentationProvider.cs" />
+    <Compile Include="Areas\HelpPage\ModelDescriptions\KeyValuePairModelDescription.cs" />
+    <Compile Include="Areas\HelpPage\ModelDescriptions\ModelDescription.cs" />
+    <Compile Include="Areas\HelpPage\ModelDescriptions\ModelDescriptionGenerator.cs" />
+    <Compile Include="Areas\HelpPage\ModelDescriptions\ModelNameAttribute.cs" />
+    <Compile Include="Areas\HelpPage\ModelDescriptions\ModelNameHelper.cs" />
+    <Compile Include="Areas\HelpPage\ModelDescriptions\ParameterAnnotation.cs" />
+    <Compile Include="Areas\HelpPage\ModelDescriptions\ParameterDescription.cs" />
+    <Compile Include="Areas\HelpPage\ModelDescriptions\SimpleTypeModelDescription.cs" />
+    <Compile Include="Areas\HelpPage\Models\HelpPageApiModel.cs" />
+    <Compile Include="Areas\HelpPage\SampleGeneration\HelpPageSampleGenerator.cs" />
+    <Compile Include="Areas\HelpPage\SampleGeneration\HelpPageSampleKey.cs" />
+    <Compile Include="Areas\HelpPage\SampleGeneration\ImageSample.cs" />
+    <Compile Include="Areas\HelpPage\SampleGeneration\InvalidSample.cs" />
+    <Compile Include="Areas\HelpPage\SampleGeneration\ObjectGenerator.cs" />
+    <Compile Include="Areas\HelpPage\SampleGeneration\SampleDirection.cs" />
+    <Compile Include="Areas\HelpPage\SampleGeneration\TextSample.cs" />
+    <Compile Include="Areas\HelpPage\XmlDocumentationProvider.cs" />
+    <Compile Include="BusinessLayerLogic\AppConfigCommitApiBLO.cs" />
+    <Compile Include="BusinessLayerLogic\AuditActivitiesApiBLO.cs" />
+    <Compile Include="BusinessLayerLogic\AuditLogApiBLO.cs" />
+    <Compile Include="BusinessLayerLogic\CompanyCategoryApiBLO.cs" />
+    <Compile Include="BusinessLayerLogic\DocumentGroupsApiBLO.cs" />
+    <Compile Include="BusinessLayerLogic\ExemptionCategoriesApiBLO.cs" />
+    <Compile Include="BusinessLayerLogic\PaymentSubmitApiBLO.cs" />
+    <Compile Include="BusinessLayerLogic\PlateNumberPoolApiBLO.cs" />
+    <Compile Include="BusinessLayerLogic\BlueBookApiBLO.cs" />
+    <Compile Include="BusinessLayerLogic\BranchesApiBLO.cs" />
+    <Compile Include="BusinessLayerLogic\BrandApiBLO.cs" />
+    <Compile Include="BusinessLayerLogic\BusinessProcessesApiBLO.cs" />
+    <Compile Include="BusinessLayerLogic\CarUniqueNumberApiBLO.cs" />
+    <Compile Include="BusinessLayerLogic\ColorsApiBLO.cs" />
+    <Compile Include="BusinessLayerLogic\DocumentsApiBLO.cs" />
+    <Compile Include="BusinessLayerLogic\ApplicationApiBLO.cs" />
+    <Compile Include="BusinessLayerLogic\ExemptedFeesApiBLO.cs" />
+    <Compile Include="BusinessLayerLogic\ExpirationApiBLO.cs" />
+    <Compile Include="BusinessLayerLogic\FeeCategoryApiBLO.cs" />
+    <Compile Include="BusinessLayerLogic\FeesApiBLO.cs" />
+    <Compile Include="BusinessLayerLogic\FileInfoCustomsApiBLO.cs" />
+    <Compile Include="BusinessLayerLogic\FileInfoInspectionsApiBLO.cs" />
+    <Compile Include="BusinessLayerLogic\FormApiBLO.cs" />
+    <Compile Include="BusinessLayerLogic\FuelTypesApiBLO.cs" />
+    <Compile Include="BusinessLayerLogic\GovernateApiBLO.cs" />
+    <Compile Include="BusinessLayerLogic\ImportCustomsApiBLO.cs" />
+    <Compile Include="BusinessLayerLogic\ImportInspectionsApiBLO.cs" />
+    <Compile Include="BusinessLayerLogic\InvoiceNumberApiBLO.cs" />
+    <Compile Include="BusinessLayerLogic\ModelApiBLO.cs" />
+    <Compile Include="BusinessLayerLogic\OrganizationApiBLO.cs" />
+    <Compile Include="BusinessLayerLogic\PersonApiBLO.cs" />
+    <Compile Include="BusinessLayerLogic\PlateCodesAPiBLO.cs" />
+    <Compile Include="BusinessLayerLogic\PlateRangesApiBLO.cs" />
+    <Compile Include="BusinessLayerLogic\CitiesApiBLO.cs" />
+    <Compile Include="BusinessLayerLogic\DistrictsApiBLO.cs" />
+    <Compile Include="BusinessLayerLogic\PlatesApiBLO.cs" />
+    <Compile Include="BusinessLayerLogic\RegionsApiBLO.cs" />
+    <Compile Include="BusinessLayerLogic\RegisteredVehiclesApiBLO.cs" />
+    <Compile Include="BusinessLayerLogic\RUFApiBLO.cs" />
+    <Compile Include="BusinessLayerLogic\SectorApiBLO.cs" />
+    <Compile Include="BusinessLayerLogic\UtilizationApiBLO.cs" />
+    <Compile Include="BusinessLayerLogic\SectorVehicleTypeRelApiBLO.cs" />
+    <Compile Include="BusinessLayerLogic\ServerMessagesApiBLO.cs" />
+    <Compile Include="BusinessLayerLogic\StatusApiBLO.cs" />
+    <Compile Include="BusinessLayerLogic\SubmitApplicationApiBLO.cs" />
+    <Compile Include="BusinessLayerLogic\TrimApiBLO.cs" />
+    <Compile Include="BusinessLayerLogic\TrunkTypeApiBLO.cs" />
+    <Compile Include="BusinessLayerLogic\ValidatorApiBLO.cs" />
+    <Compile Include="BusinessLayerLogic\VehicleCategoryApiBLO.cs" />
+    <Compile Include="BusinessLayerLogic\VehicleRegistrationApiBLO.cs" />
+    <Compile Include="BusinessLayerLogic\VehicleRegistrationFeeApiBLO.cs" />
+    <Compile Include="BusinessLayerLogic\VehicleApiBLO.cs" />
+    <Compile Include="BusinessLayerLogic\VehicleTypesApiBLO.cs" />
+    <Compile Include="Controllers\AppConfigCommitController.cs" />
+    <Compile Include="Controllers\AuditActivitiesController.cs" />
+    <Compile Include="Controllers\AuditLogController.cs" />
+    <Compile Include="Controllers\BlueBookController.cs" />
+    <Compile Include="Controllers\BranchesController.cs" />
+    <Compile Include="Controllers\BrandController.cs" />
+    <Compile Include="Controllers\BusinessProcessesController.cs" />
+    <Compile Include="Controllers\CarUniqueNumberController.cs" />
+    <Compile Include="Controllers\CitiesController.cs" />
+    <Compile Include="Controllers\ColorsController.cs" />
+    <Compile Include="Controllers\CompanyCategoryController.cs" />
+    <Compile Include="Controllers\DistrictsController.cs" />
+    <Compile Include="Controllers\DocumentGroupsController.cs" />
+    <Compile Include="Controllers\DocumentsController.cs" />
+    <Compile Include="Controllers\ApplicationController.cs" />
+    <Compile Include="Controllers\ExemptedFeesController.cs" />
+    <Compile Include="Controllers\ExemptionCategoriesController.cs" />
+    <Compile Include="Controllers\ExpirationController.cs" />
+    <Compile Include="Controllers\FeeCategoryController.cs" />
+    <Compile Include="Controllers\FeesController.cs" />
+    <Compile Include="Controllers\FileInfoCustomsController.cs" />
+    <Compile Include="Controllers\FileInfoInspectionsController.cs" />
+    <Compile Include="Controllers\FormController.cs" />
+    <Compile Include="Controllers\FuelTypesController.cs" />
+    <Compile Include="Controllers\GovernateController.cs" />
+    <Compile Include="Controllers\ImportCustomsController.cs" />
+    <Compile Include="Controllers\ImportInspectionsController.cs" />
+    <Compile Include="Controllers\InvoiceNumberController.cs" />
+    <Compile Include="Controllers\ModelController.cs" />
+    <Compile Include="Controllers\OrganizationController.cs" />
+    <Compile Include="Controllers\PaymentSubmitController.cs" />
+    <Compile Include="Controllers\PersonController.cs" />
+    <Compile Include="Controllers\PlateCodesController.cs" />
+    <Compile Include="Controllers\PlateNumberPoolController.cs" />
+    <Compile Include="Controllers\PlateRangesController.cs" />
+    <Compile Include="Controllers\PlatesController.cs" />
+    <Compile Include="Controllers\RegionsController.cs" />
+    <Compile Include="Controllers\RegisteredVehiclesController.cs" />
+    <Compile Include="Controllers\RUFController.cs" />
+    <Compile Include="Controllers\SectorsController.cs" />
+    <Compile Include="Controllers\UtilizationController.cs" />
+    <Compile Include="Controllers\SectorVehicleTypeRelController.cs" />
+    <Compile Include="Controllers\ServerMessagesController.cs" />
+    <Compile Include="Controllers\StatusController.cs" />
+    <Compile Include="Controllers\SubmitApplicationController.cs" />
+    <Compile Include="Controllers\TrimController.cs" />
+    <Compile Include="Controllers\TrunkTypeController.cs" />
+    <Compile Include="Controllers\ValidatorController.cs" />
+    <Compile Include="Controllers\VehicleCategoryController.cs" />
+    <Compile Include="Controllers\VehicleRegistrationController.cs" />
+    <Compile Include="Controllers\VehicleController.cs" />
+    <Compile Include="Controllers\VehicleTypesController.cs" />
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Helpers\BPDeserialize.cs" />
+    <Compile Include="Helpers\JsonFormatValidate.cs" />
+    <Compile Include="Helpers\JsonHelper.cs" />
+    <Compile Include="Helpers\PaymentOrderAPIHelper.cs" />
+    <Compile Include="Mapper\Mapper.cs" />
+    <Compile Include="Models\ApiResponse\ApiResponse.cs" />
+    <Compile Include="Models\AppDocInputsCustom.cs" />
+    <Compile Include="Models\ApplicationDocumentsCustom.cs" />
+    <Compile Include="Models\BankCustom.cs" />
+    <Compile Include="Models\BPFeeCustom.cs" />
+    <Compile Include="Models\BPOutputCustom.cs" />
+    <Compile Include="Models\BPOutputRelCustom.cs" />
+    <Compile Include="Models\BPRelationshipsCustom.cs" />
+    <Compile Include="Models\BPSectorVehicleCustom.cs" />
+    <Compile Include="Models\BranchesCustom.cs" />
+    <Compile Include="Models\BrandCustom.cs" />
+    <Compile Include="Models\BusinessProcessesCustom.cs" />
+    <Compile Include="Models\Receipts.cs" />
+    <Compile Include="Models\VehicleOwnershipCustom.cs" />
+    <Compile Include="Models\CarStatusCustom.cs" />
+    <Compile Include="Models\CarUniqueNumberCustom.cs" />
+    <Compile Include="Models\CitiesCustom.cs" />
+    <Compile Include="Models\ColorsCustom.cs" />
+    <Compile Include="Models\CompanyCategoryCustom.cs" />
+    <Compile Include="Models\CompanyClassCustom.cs" />
+    <Compile Include="Models\CustomsOfficesCustom.cs" />
+    <Compile Include="Models\DistrictsCustom.cs" />
+    <Compile Include="Models\DocumentInputCustom.cs" />
+    <Compile Include="Models\DocumentProcessRelationshipCustom.cs" />
+    <Compile Include="Models\DocumentsCustom.cs" />
+    <Compile Include="Models\ApplicationCustom.cs" />
+    <Compile Include="Models\ExemptedFeesCustom.cs" />
+    <Compile Include="Models\ExemptionCategoriesCustom.cs" />
+    <Compile Include="Models\FeeCategoryCustom.cs" />
+    <Compile Include="Models\FeesCustom.cs" />
+    <Compile Include="Models\FileInfoCustomsCustom.cs" />
+    <Compile Include="Models\FileInfoInspectionsCustom.cs" />
+    <Compile Include="Models\FORMCustom.cs" />
+    <Compile Include="Models\FuelTypesCustom.cs" />
+    <Compile Include="Models\GovernateCustom.cs" />
+    <Compile Include="Models\HoldTypeCategRelCustom.cs" />
+    <Compile Include="Models\HoldTypesCustom.cs" />
+    <Compile Include="Models\ImportCustomFilter.cs" />
+    <Compile Include="Models\ImportCustomsCustom.cs" />
+    <Compile Include="Models\ImporterCustom.cs" />
+    <Compile Include="Models\ImportInspectionsCustom.cs" />
+    <Compile Include="Models\ApiResult\ObjectResult.cs" />
+    <Compile Include="Models\ImportInspectionsFilter.cs" />
+    <Compile Include="Models\InsuranceCustom.cs" />
+    <Compile Include="Models\InvoiceNumberCustom.cs" />
+    <Compile Include="Models\LicenseOwnershipCustom.cs" />
+    <Compile Include="Models\LockedCategoryCustom.cs" />
+    <Compile Include="Models\ModelCustom.cs" />
+    <Compile Include="Models\OrganizationCustom.cs" />
+    <Compile Include="Models\OutputGroupCustom.cs" />
+    <Compile Include="Models\OwnerTypeCustom.cs" />
+    <Compile Include="Models\PersonCustom.cs" />
+    <Compile Include="Models\PlateCodesCustom.cs" />
+    <Compile Include="Models\PlateNumberPoolCustom.cs" />
+    <Compile Include="Models\PlateRangesCustom.cs" />
+    <Compile Include="Models\RegionsCustom.cs" />
+    <Compile Include="Models\RegisteredVehiclesCustom.cs" />
+    <Compile Include="Models\RegisteredVehicleTypesCustom.cs" />
+    <Compile Include="Models\SectionCustom.cs" />
+    <Compile Include="Models\SectorsCustom.cs" />
+    <Compile Include="Models\SectorsLimitCustom.cs" />
+    <Compile Include="Models\SectorWarningLimitCustom.cs" />
+    <Compile Include="Models\ServerMessagesCustom.cs" />
+    <Compile Include="Models\StatusCustom.cs" />
+    <Compile Include="Models\ThirdPartiesCustom.cs" />
+    <Compile Include="Models\TRIMCustom.cs" />
+    <Compile Include="Models\TrunkTypeCustom.cs" />
+    <Compile Include="Models\UtilizationCustom.cs" />
+    <Compile Include="Models\VehicleCategoryCustom.cs" />
+    <Compile Include="Models\VehicleHoldCustom.cs" />
+    <Compile Include="Models\VehicleRegistrationCustom.cs" />
+    <Compile Include="Models\VehicleRegistrationFeeCustom.cs" />
+    <Compile Include="Models\VehicleTypesCustom.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Areas\HelpPage\HelpPage.css" />
+    <Content Include="Assemblies\Inkript.dll" />
+    <Content Include="Assemblies\InkriptMapper.dll" />
+    <Content Include="Assemblies\InkriptRest.dll" />
+    <Content Include="Assemblies\log4net.dll" />
+    <Content Include="favicon.ico" />
+    <Content Include="Global.asax" />
+    <Content Include="Areas\HelpPage\Views\Web.config" />
+    <Content Include="Areas\HelpPage\Views\Shared\_Layout.cshtml" />
+    <Content Include="Areas\HelpPage\Views\Help\ResourceModel.cshtml" />
+    <Content Include="Areas\HelpPage\Views\Help\Index.cshtml" />
+    <Content Include="Areas\HelpPage\Views\Help\DisplayTemplates\TextSample.cshtml" />
+    <Content Include="Areas\HelpPage\Views\Help\DisplayTemplates\SimpleTypeModelDescription.cshtml" />
+    <Content Include="Areas\HelpPage\Views\Help\DisplayTemplates\Samples.cshtml" />
+    <Content Include="Areas\HelpPage\Views\Help\DisplayTemplates\Parameters.cshtml" />
+    <Content Include="Areas\HelpPage\Views\Help\DisplayTemplates\ModelDescriptionLink.cshtml" />
+    <Content Include="Areas\HelpPage\Views\Help\DisplayTemplates\KeyValuePairModelDescription.cshtml" />
+    <Content Include="Areas\HelpPage\Views\Help\DisplayTemplates\InvalidSample.cshtml" />
+    <Content Include="Areas\HelpPage\Views\Help\DisplayTemplates\ImageSample.cshtml" />
+    <Content Include="Areas\HelpPage\Views\Help\DisplayTemplates\HelpPageApiModel.cshtml" />
+    <Content Include="Areas\HelpPage\Views\Help\DisplayTemplates\EnumTypeModelDescription.cshtml" />
+    <Content Include="Areas\HelpPage\Views\Help\DisplayTemplates\DictionaryModelDescription.cshtml" />
+    <Content Include="Areas\HelpPage\Views\Help\DisplayTemplates\ComplexTypeModelDescription.cshtml" />
+    <Content Include="Areas\HelpPage\Views\Help\DisplayTemplates\CollectionModelDescription.cshtml" />
+    <Content Include="Areas\HelpPage\Views\Help\DisplayTemplates\ApiGroup.cshtml" />
+    <Content Include="Areas\HelpPage\Views\Help\Api.cshtml" />
+    <Content Include="Areas\HelpPage\Views\_ViewStart.cshtml" />
+    <Content Include="hibernate.cfg.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Inkript.VR.Business\Inkript.VR.Business.csproj">
+      <Project>{64f4ba81-a17e-4f23-bc08-4a5667cd8a9d}</Project>
+      <Name>Inkript.VR.Business</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Inkript.VR.Models\Inkript.VR.Models.csproj">
+      <Project>{40c918d7-c27e-4907-819f-8cfbbe6cce42}</Project>
+      <Name>Inkript.VR.Models</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="log4net.config">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <None Include="Properties\PublishProfiles\FolderProfile.pubxml" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{4A0DDDB5-7A95-4FBF-97CC-616D07737A77}" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.targets" Condition="Exists('$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.targets')" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <Target Name="MvcBuildViews" AfterTargets="AfterBuild" Condition="'$(MvcBuildViews)'=='true'">
+    <AspNetCompiler VirtualPath="temp" PhysicalPath="$(WebProjectOutputDir)" />
+  </Target>
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>0</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:5050/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target> -->
+</Project>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<hibernate-mapping assembly="Inkript.VR.Models" namespace="Inkript.VR.Models" xmlns="urn:nhibernate-mapping-2.2">
+  <class name="FeeCategory" table="FeeCategory" lazy="false" >
+    <id name="FeeCategoryId" column="FeeCategoryId">
+      <generator class="identity" />
+    </id>
+    <property name="FeeCategoryNameEn">
+      <column name="FeeCategoryNameEn" sql-type="nvarchar" not-null="true" />
+    </property>
+    <property name="FeeCategoryNameAr">
+      <column name="FeeCategoryNameAr" sql-type="nvarchar" not-null="true" />
+    </property>
+    <property name="FeeCategorySequence">
+      <column name="FeeCategorySequence" sql-type="int" not-null="true" />
+    </property>
+    <bag name="Fees" inverse="true" lazy="false">
+      <key column="FeeCategoryId" />
+      <one-to-many class="Fees" />
+    </bag>
+  </class>
+</hibernate-mapping>

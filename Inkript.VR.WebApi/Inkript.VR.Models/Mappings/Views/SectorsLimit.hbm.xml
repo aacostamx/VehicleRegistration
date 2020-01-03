@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<hibernate-mapping assembly="Inkript.VR.Models" namespace="Inkript.VR.Models" xmlns="urn:nhibernate-mapping-2.2">
+  <class name="SectorsLimit" table="SectorsLimit" mutable="false">
+    <id name="SectorId" />
+    <property name="SectorNameEn">
+      <column name="SectorNameEn" sql-type="nvarchar" not-null="false" />
+    </property>
+    <property name="SectorNameAr">
+      <column name="SectorNameAr" sql-type="nvarchar" not-null="false" />
+    </property>
+    <property name="PlateCodeId">
+      <column name="PlateCodeId" sql-type="int" not-null="true" />
+    </property>
+    <property name="VehicleTypeId">
+      <column name="VehicleTypeId" sql-type="int" not-null="false" />
+    </property>
+    <property name="BranchId">
+      <column name="BranchId" sql-type="int" not-null="false" />
+    </property>
+    <property name="TotalAvailable">
+      <column name="TotalAvailable" sql-type="int" not-null="false" />
+    </property>
+    <property name="WarningLimit">
+      <column name="WarningLimit" sql-type="nvarchar" not-null="true" />
+    </property>
+  </class>
+</hibernate-mapping>
